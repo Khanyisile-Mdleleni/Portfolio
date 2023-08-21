@@ -133,6 +133,19 @@ nav .menu span{
 #home-container{
     display: flex;
 }
+
+
+/* -----------------------Reuseable styles------------------------ */
+#intro{
+    text-align: center;
+}
+#subtitle{
+    color:rgba(118, 64, 119,1 ) ;
+}
+
+.read-the-docs {
+  color: #888;
+}
 #btn{
     background-color: rgba(118, 64, 119,1 );
     border: none;
@@ -147,15 +160,12 @@ nav .menu span{
     transition-duration: 0.4s;
     cursor: pointer;
 }
+ /* -----------------------------About----------------------------------- */
 
-/* -----------------------Reuseable styles------------------------ */
-#intro{
+#about-description{
+    font-size: medium;
+}
+
+ #about-btn{
     text-align: center;
-}
-#subtitle{
-    color:rgba(118, 64, 119,1 ) ;
-}
-
-.read-the-docs {
-  color: #888;
-}
+ } 
