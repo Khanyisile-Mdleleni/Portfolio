@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+.App{
+    height: 100%;
+    width: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* -------------------------------Header------------------------------- */
+.active{
+    background-color: blueviolet;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(118, 64, 119,1 );
+    padding: 10px 40px;
+    position: sticky;
+    top: 0;
+    
+    }
+nav .title{
+    color: #fff;
+    text-decoration: none;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none ;
+}
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.21rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+}
+nav ul.open{
+    display: flex;
+}
+nav .menu{
+    display: none;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+nav .menu span{
+    height: 0.4rem;
+    width: 100%;
+    border-radius: 0.2rem;
+    background-color: #fff;
+} 
+
+@media  (max-width:480px) {
+    nav .menu{
+        display: flex;
+    }
+    nav{
+        flex-direction: column;
+        align-items: start;
+    }
+    nav ul{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+    nav ul li{
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a{
+        margin: 0.2rem 0.5rem;
+    }
+    
+}
+
+/* ----------------------Home------------------------ */
+#home{
+   color: #fff;
+   padding-top: 42px;
+   font-size: x-large;
+}
+#home-subtitle{
+    white-space: nowrap;
+	overflow: hidden;
+	border-right: 4px solid #fff;
+	animation: cursor 1s step-start infinite, 
+    text 6s steps(16) alternate infinite; 
+}
+@keyframes cursor {
+	0%, 100% { 
+    border-color: #fff; 
+  }
+}
+
+@keyframes text {
+	0% { 
+    width: 0; 
+  }
+	100% { 
+    width: 21.5ch; 
+  }
+}
+#icons li{
+    list-style: none;
+    padding-bottom: 25px;
+    padding-top: 3.2rem;
+}
+#icons ul li a{
+    color: rgba(118, 64, 119,1 );
+}
+#home-content{
+    padding-top: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+
+}
+
+#home-container{
+    display: flex;
+}
+#btn{
+    background-color: rgba(118, 64, 119,1 );
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 14px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+/* -----------------------Reuseable styles------------------------ */
+#intro{
+    text-align: center;
+}
+#subtitle{
+    color:rgba(118, 64, 119,1 ) ;
+}
+
+.read-the-docs {
+  color: #888;
+}
