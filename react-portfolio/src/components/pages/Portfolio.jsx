@@ -14,6 +14,7 @@ function Portfolio() {
      <h1 id='title'>Portfolio</h1>
      <h3 id='subtitle'>Most recent work</h3>
     </div>
+    
     </div>
     </>
   )
