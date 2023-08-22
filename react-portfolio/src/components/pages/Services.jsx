@@ -8,6 +8,10 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 import figma from '../img/figma.png'
+import html from '../img/html.png'
+import js from '../img/js.png'
+import react from '../img/react.png'
+import node from '../img/node.png'
 
 
 
@@ -79,6 +83,7 @@ import figma from '../img/figma.png'
         </Col>
       </Row>
       </Container>
+
       <Modal show={show} onHide={handleClose}>
         <Modal.Header style={{ backgroundColor: 'rgba(118, 64, 119,1 )', color: '#fff'}} closeButton>
           <Modal.Title>UI/UX Design</Modal.Title>
@@ -103,9 +108,18 @@ import figma from '../img/figma.png'
           <li>Uses framewoks like react to create user-friendly web pages.</li>
           <li>Create quality mockups and prototypes.</li>
         </ul>
-        <img src={figma} alt="" style={{
+        <img src={html} alt="" style={{
           width: '100px', height: '50px'
-        }} />
+        }} 
+        />
+        <img src={js} alt="" style={{
+          width: '70px', height: '30px'
+        }} 
+        />
+          <img src={react} alt="" style={{
+          width: '70px', height: '30px'
+        }} 
+        />
        </Modal.Body>
       </Modal>
 
@@ -117,9 +131,13 @@ import figma from '../img/figma.png'
          <ul>
           <li>Implements responses to what the front-end has initiated.</li>
         </ul>
-        <img src={figma} alt="" style={{
-          width: '100px', height: '50px'
+        <img src={js} alt="" style={{
+          width: '70px', height: '30px'
         }} />
+        <img src={node} alt="" style={{
+          width: '70px', height: '30px'
+        }} 
+        />
        </Modal.Body>
       </Modal>
       
