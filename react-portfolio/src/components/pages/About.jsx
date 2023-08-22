@@ -30,25 +30,25 @@ function About (){
         </Col> 
 
         <Col  xs={12} md={8}>
-         <p id='about-description'> My primary responsibility is to design, develop and
+         <p  className='fs-6'> My primary responsibility is to design, develop and
              maintain high-quality web applications using react,
              javascript other related technologies. </p>
-         <p id='about-description'>Birthday: 12 Feb 2001 <br/>
+         <p className='fs-6'>Birthday: 12 Feb 2001 <br/>
             Gender: Female <br/>
             Freelance: Available <br/>
          </p>
          <Row>
          <Col xs={6} md={4}>
-          <span id='about-description'><b>01+</b></span>
-          <span id='about-description'> Years <br/> experience</span>
+          <span className='fs-6'><b>01+</b></span>
+          <span className='fs-6'> Years <br/> experience</span>
          </Col>
          <Col xs={6} md={4}>
-          <span id='about-description'><b>02+</b></span>
-          <span id='about-description'> Completed <br/> projects</span>
+          <span className='fs-6'><b>02+</b></span>
+          <span className='fs-6'> Completed <br/> projects</span>
          </Col>
          <Col xs={6} md={4}>
-          <span id='about-description'><b>01+</b></span>
-          <span id='about-description'> Companies <br/> worked</span>
+          <span className='fs-6'><b>01+</b></span>
+          <span className='fs-6'> Companies <br/> worked</span>
          </Col>
          </Row><br />
          <div id='about-btn'> 

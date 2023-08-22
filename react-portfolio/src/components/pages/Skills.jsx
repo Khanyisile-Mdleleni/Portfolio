@@ -11,29 +11,40 @@ import image from '../img/bg.png'
       backgroundImage:`url(${image})`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
-      height: '690px'
+      height: '790px'
       }}>
     <div id='intro'>
      <h1 id='titlie'>Skills</h1>
      <h3 id='subtitle'>My Personal Journey</h3>
     </div>
     <Container>
-      <Row>
-        <Col>
-         <h4><i className="uil uil-graduation-cap"></i> Education</h4>
-         <div>
-           <h6>Matric</h6>
-           <span>Lutuka SSS</span>
-           <i className="uil uil-calendar-alt"></i>
-            Jan 2016 - Nov 2018
-        </div>
-                      
+    <Row>
+        <Col md={{ span: 3, offset: 3 }}>
+          <h5><i className="uil uil-graduation-cap"></i>  Education</h5>
+          <h6>Matric</h6>
+          <p className='fs-6'>Lutuka SSS</p>
+          <p className='fs-6'><i className="uil uil-calender"></i>  Jan 2016 - Nov 2018</p> 
         </Col>
-        <Col xs={5}>
-          2 of 3
-          </Col>
-        <Col>
-          <h4><i className="uil uil-briefcase"></i> Work</h4>
+        <Col md={{ span: 3, offset: 3 }}>
+          <h5><i className="uil uil-briefcase"></i>  Work</h5>
+        </Col>
+        <Col md={{ span: 3, offset: 3 }}></Col>
+        <Col md={{ span: 3, offset: 3 }}>
+          <h6>Junior Software Developer</h6>
+          <p className='fs-6'>UVU Africa</p>
+          <p className='fs-6'><i className="uil uil-calender"></i>  Feb 2023 - Jul 2023</p> 
+        </Col>
+        <Col md={{ span: 3, offset: 3 }}>
+          <h6>ND in Analytical Chemistry</h6>
+          <p className='fs-6'>Cape Peninsula University Of Tecnology</p>
+          <p className='fs-6'><i className="uil uil-calender"></i>  Feb 2020 - Nov 2022</p>
+        </Col>
+        <Col md={{ span: 3, offset: 3 }}></Col>
+        <Col md={{ span: 3, offset: 3 }}></Col>
+        <Col md={{ span: 3, offset: 3 }}>
+          <h6>Junior Software Developer</h6>
+          <p className='fs-6'>Younglings Africa</p>
+          <p className='fs-6'><i className="uil uil-calender"></i>  Jul 2023 - Present</p>
         </Col>
       </Row>
     </Container>
