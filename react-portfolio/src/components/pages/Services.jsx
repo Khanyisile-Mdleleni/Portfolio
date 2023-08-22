@@ -13,9 +13,16 @@ import figma from '../img/figma.png'
 
  function Services() {
   const [show, setShow] = useState(false);
+  const [pop, setPop] = useState(false);
+  const [slide, setSlide] = useState(false);
 
   const handleClose = () => setShow(false);
+  const handleShut = () => setPop(false);
+  const handleHide = () => setSlide(false);
+
   const handleShow = () => setShow(true);
+  const handlePop = () => setPop(true);
+  const handleSlide = () => setSlide(true);
   return (
     <>
       <div id='home' style={{
@@ -51,7 +58,7 @@ import figma from '../img/figma.png'
         <Card.Title className='text-center , fs-3'><i class="uil uil-arrow"> </i>Frontend</Card.Title>  <br /><br /><br />
         <div className='text-center'>
         <Card.Link>
-          <Button variant='info-emphasis' onClick={handleShow}>View more  <i className="uil uil-arrow-right"></i></Button>
+          <Button variant='info-emphasis' onClick={handlePop}>View more  <i className="uil uil-arrow-right"></i></Button>
        </Card.Link>
         </div>
       </Card.Body>
@@ -64,7 +71,7 @@ import figma from '../img/figma.png'
         <Card.Title className='text-center , fs-3'><i class="uil uil-pen"></i> Backend </Card.Title>  <br /><br /><br />
         <div className='text-center'>
         <Card.Link>
-          <Button variant='info-emphasis' onClick={handleShow}>View more  <i className="uil uil-arrow-right"></i></Button>
+          <Button variant='info-emphasis' onClick={handleSlide}>View more  <i className="uil uil-arrow-right"></i></Button>
        </Card.Link>
         </div>
       </Card.Body>
@@ -86,28 +93,29 @@ import figma from '../img/figma.png'
         }} />
        </Modal.Body>
       </Modal>
-      <Modal show={show} onHide={handleClose}>
+
+      <Modal show={pop} onHide={handleShut}>
         <Modal.Header style={{ backgroundColor: 'rgba(118, 64, 119,1 )', color: '#fff'}} closeButton>
-          <Modal.Title>UI/UX Design</Modal.Title>
+          <Modal.Title>Frontend</Modal.Title>
         </Modal.Header>
         <Modal.Body style={{ backgroundColor: 'rgba(118, 64, 119,1 )', color: '#fff'}}>
          <ul>
-          <li> Designing engaging and responsive landing pages.</li>
-          <li> Creating the design and layout of a website or web pages.</li>
+          <li>Uses framewoks like react to create user-friendly web pages.</li>
+          <li>Create quality mockups and prototypes.</li>
         </ul>
         <img src={figma} alt="" style={{
           width: '100px', height: '50px'
         }} />
        </Modal.Body>
       </Modal>
-       <Modal show={show} onHide={handleClose}>
+
+       <Modal show={slide} onHide={handleHide}>
         <Modal.Header style={{ backgroundColor: 'rgba(118, 64, 119,1 )', color: '#fff'}} closeButton>
-          <Modal.Title>UI/UX Design</Modal.Title>
+          <Modal.Title>Backend</Modal.Title>
         </Modal.Header>
         <Modal.Body style={{ backgroundColor: 'rgba(118, 64, 119,1 )', color: '#fff'}}>
          <ul>
-          <li> Designing engaging and responsive landing pages.</li>
-          <li> Creating the design and layout of a website or web pages.</li>
+          <li>Implements responses to what the front-end has initiated.</li>
         </ul>
         <img src={figma} alt="" style={{
           width: '100px', height: '50px'
