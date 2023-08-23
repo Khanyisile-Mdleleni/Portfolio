@@ -41,8 +41,8 @@ import node from '../img/node.png'
       </div>
      
       <Container>
-      <Row>
-        <Col sm>
+      <Row className='justify-content-md-center'>
+        <Col  md='auto'>
         <Card style={{ width: '16rem', backgroundColor: 'rgba(118, 64, 119,1 )', height: '16rem', position:'static'}}>
       <Card.Body>
         <Card.Title className='text-center, fs-3'><i className="uil uil-web-grid-alt"></i> UI/UX Design</Card.Title><br /><br />
@@ -55,7 +55,7 @@ import node from '../img/node.png'
       </Card> <br/>
         </Col>
 
-        <Col sm>
+        <Col  md='auto'>
         <Card style={{ width: '16rem', backgroundColor: 'rgba(118, 64, 119,1 )', height: '16rem', position:'static' }}>
       <Card.Body>
         <Card.Title className='text-center , fs-3'><i class="uil uil-arrow"> </i>Frontend</Card.Title>  <br /><br />
@@ -68,7 +68,7 @@ import node from '../img/node.png'
       </Card><br/>
         </Col>
 
-        <Col sm>
+        <Col md='auto'>
         <Card style={{ width: '16rem', backgroundColor: 'rgba(118, 64, 119,1 )', height: '16rem', position:'static' }}>
       <Card.Body>
         <Card.Title className='text-center , fs-3'><i class="uil uil-pen"></i> Backend </Card.Title>  <br /><br />

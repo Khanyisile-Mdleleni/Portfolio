@@ -13,7 +13,7 @@ function About (){
         backgroundImage:`url(${image})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        height: '690px'
+        height: '120vh'
         }}>
 
       <div id='intro'>
@@ -26,7 +26,7 @@ function About (){
       <Row>
         <Col xs={6} md={4}>
           <img src={about} alt="" style={{
-            width:'320px',height:'320px'}}/>
+            width:'250px',height:'250px'}}/>
         </Col> 
 
         <Col  xs={12} md={8}>
