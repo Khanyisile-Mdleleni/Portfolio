@@ -24,7 +24,7 @@ function Portfolio() {
               src={image}
               alt="Second slide"
               style={{
-                width: "200vh",
+                width: "50vh",
                 height: "350px",
               }}
             />
@@ -37,7 +37,7 @@ function Portfolio() {
               src={image}
               alt="Second slide"
               style={{
-                width: "200vh",
+                width: "50vh",
                 height: "350px",
               }}
             />
@@ -50,7 +50,7 @@ function Portfolio() {
               src={image}
               alt="Third slide"
               style={{
-                width: "200vh",
+                width: "50vh",
                 height: "350px",
               }}
             />
