@@ -99,7 +99,7 @@ nav .menu span{
 	overflow: hidden;
 	border-right: 4px solid #fff;
 	animation: cursor 1s step-start infinite, 
-    text 6s steps(16) alternate infinite; 
+    text 4s steps(12) alternate infinite; 
 }
 @keyframes cursor {
 	0%, 100% { 
@@ -119,15 +119,16 @@ nav .menu span{
     list-style: none;
     padding-bottom: 25px;
     padding-top: 3.2rem;
+    font-size: larger;
 }
 #icons ul li a{
     color: rgba(118, 64, 119,1 );
 }
 #home-content{
-    padding-top: 5.5rem;
+    padding-top: 3.5rem;
     display: flex;
     flex-direction: column;
-    padding: 80px;
+    padding: 60px;
 
 }
 
