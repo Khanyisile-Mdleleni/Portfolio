@@ -33,7 +33,7 @@ import node from '../img/node.png'
         backgroundImage:`url(${image})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        height: '690px'
+        height: '120vh'
         }}>
       <div id='intro'>
        <h1 id='title'>Services</h1>
@@ -43,10 +43,9 @@ import node from '../img/node.png'
       <Container>
       <Row>
         <Col sm>
-        <Card style={{ 
-          width: '18rem', backgroundColor: 'rgba(118, 64, 119,1 )', height: '20rem'}}>
+        <Card style={{ width: '16rem', backgroundColor: 'rgba(118, 64, 119,1 )', height: '16rem', position:'static'}}>
       <Card.Body>
-        <Card.Title className='text-center, fs-3'><i className="uil uil-web-grid-alt"></i> UI/UX Design</Card.Title><br /><br /><br />
+        <Card.Title className='text-center, fs-3'><i className="uil uil-web-grid-alt"></i> UI/UX Design</Card.Title><br /><br />
         <div className='text-center'>
         <Card.Link>
           <Button variant='info-emphasis' onClick={handleShow}>View more  <i className="uil uil-arrow-right"></i></Button>
@@ -57,9 +56,9 @@ import node from '../img/node.png'
         </Col>
 
         <Col sm>
-        <Card style={{ width: '18rem', backgroundColor: 'rgba(118, 64, 119,1 )', height: '20rem' }}>
+        <Card style={{ width: '16rem', backgroundColor: 'rgba(118, 64, 119,1 )', height: '16rem', position:'static' }}>
       <Card.Body>
-        <Card.Title className='text-center , fs-3'><i class="uil uil-arrow"> </i>Frontend</Card.Title>  <br /><br /><br />
+        <Card.Title className='text-center , fs-3'><i class="uil uil-arrow"> </i>Frontend</Card.Title>  <br /><br />
         <div className='text-center'>
         <Card.Link>
           <Button variant='info-emphasis' onClick={handlePop}>View more  <i className="uil uil-arrow-right"></i></Button>
@@ -70,9 +69,9 @@ import node from '../img/node.png'
         </Col>
 
         <Col sm>
-        <Card style={{ width: '18rem', backgroundColor: 'rgba(118, 64, 119,1 )', height: '20rem' }}>
+        <Card style={{ width: '16rem', backgroundColor: 'rgba(118, 64, 119,1 )', height: '16rem', position:'static' }}>
       <Card.Body>
-        <Card.Title className='text-center , fs-3'><i class="uil uil-pen"></i> Backend </Card.Title>  <br /><br /><br />
+        <Card.Title className='text-center , fs-3'><i class="uil uil-pen"></i> Backend </Card.Title>  <br /><br />
         <div className='text-center'>
         <Card.Link>
           <Button variant='info-emphasis' onClick={handleSlide}>View more  <i className="uil uil-arrow-right"></i></Button>
@@ -105,7 +104,7 @@ import node from '../img/node.png'
         </Modal.Header>
         <Modal.Body style={{ backgroundColor: 'rgba(118, 64, 119,1 )', color: '#fff'}}>
          <ul>
-          <li>Uses framewoks like react to create user-friendly web pages.</li>
+          <li>Uses frameworks like react to create user-friendly web pages.</li>
           <li>Create quality mockups and prototypes.</li>
         </ul>
         <img src={html} alt="" style={{
