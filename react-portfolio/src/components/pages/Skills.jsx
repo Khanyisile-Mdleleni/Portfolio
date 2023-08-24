@@ -17,7 +17,7 @@ function Skills() {
         }}
       >
         <div id="intro">
-          <h1 id="titlie">Skills</h1>
+          <h1 id="titlie">Qualifications</h1>
           <h3 id="subtitle">My Personal Journey</h3>
         </div>
         <Container>
@@ -47,7 +47,7 @@ function Skills() {
             </Col>
             <Col md={{ span: 3, offset: 3 }}>
               <h6>ND in Analytical Chemistry</h6>
-              <p className="fs-6">Cape Peninsula University Of Tecnology</p>
+              <p className="fs-6">Cape Peninsula University Of Technology</p>
               <p className="fs-6">
                 <i className="uil uil-calender"></i> Feb 2020 - Nov 2022
               </p>
