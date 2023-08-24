@@ -174,4 +174,55 @@ nav .menu span{
     padding-bottom: 25px;
     padding-top: 3.2rem;
 }
- 
+
+ /* -----------------------------Footer---------------------------------- */
+
+ footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(118, 64, 119,1 );
+    padding: 10px 40px;
+    position: sticky;
+    top: 0;
+    
+    }
+
+footer ul{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+footer ul li{
+    list-style: none ;
+}
+footer ul li a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0.21rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+}
+#icons a{
+    padding-bottom: 25px;
+    padding-top: 3.2rem;
+    font-size: larger;
+    color: #fff;
+    margin-right: 20px;
+
+}
+
+#footer-content{
+    width: 100%;
+    align-items: center;
+}
+ .footer_title {
+    width: 100%;
+    text-align: center;
+    font-size: medium;
+ }
+

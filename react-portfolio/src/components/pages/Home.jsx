@@ -5,12 +5,14 @@ import img from '../img/bibo.png'
 function Home () { 
     return (
       <>
-       <div id='home' style={{
+       <div id='home' 
+       style={{
         backgroundImage:`url(${image})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        height: '690px'
-        }}>
+        minHeight: "100vh",
+        width: '100%'      }}
+        >
         
          <div className='container' id='home-container'>
            <div id='icons'>

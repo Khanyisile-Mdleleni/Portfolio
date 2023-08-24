@@ -14,7 +14,8 @@ function About() {
           backgroundImage: `url(${image})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          height: "120vh",
+          minHeight: "100vh",
+          width: '100%'
         }}
       >
         <div id="intro">

@@ -7,6 +7,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
+import { Link } from "react-router-dom";
 
 function Contact() {
   const [validated, setValidated] = useState(false);
@@ -28,13 +29,15 @@ function Contact() {
           backgroundImage: `url(${image})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          height: "120vh",
+          minHeight: "100vh",
+          width: "100%",
         }}
       >
         <div id="intro">
           <h1 id="title">Contact Me</h1>
           <h3 id="subtitle">Get in touch</h3>
-        </div>
+        </div>{" "}
+        <br />
         <Container>
           <Row>
             <Col>
@@ -61,6 +64,9 @@ function Contact() {
                 </ul>
               </div>
             </Col>
+
+{/* ----------------------------------------------CONTACT FORM---------------------------------- */}
+
             <Col>
               <div id="form">
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>
@@ -76,12 +82,11 @@ function Contact() {
                           type="text"
                           placeholder="Enter your First name"
                         />
-                        <Form.Control.Feedback>
-                        </Form.Control.Feedback>
+                        <Form.Control.Feedback></Form.Control.Feedback>
                       </Form.Group>
                     </Col>
-                  </Row> <br />
-
+                  </Row>{" "}
+                  <br />
                   <Form.Group
                     as={Col}
                     md="8"
@@ -94,43 +99,84 @@ function Contact() {
                         aria-describedby="inputGroupPrepend"
                         required
                       />
-                      <Form.Control.Feedback type="invalid">
-                      </Form.Control.Feedback>
+                      <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
                     </InputGroup>
-                  </Form.Group> <br />
-
+                  </Form.Group>{" "}
+                  <br />
                   <Row>
                     <Col>
-                    <Form.Group
-                    as={Col}
-                    md="8"
-                    controlId="validationCustomUsername"
-                  >
-                    
-                    <InputGroup hasValidation>
-                      <Form.Control
-                        type="text"
-                        placeholder="Enter Your Message"
-                        aria-describedby="inputGroupPrepend"
-                        required
-                        as="textarea" rows={4}
-                      />
-                      <Form.Control.Feedback type="invalid">
-                      </Form.Control.Feedback>
-                    </InputGroup>
-                  </Form.Group>
+                      <Form.Group
+                        as={Col}
+                        md="8"
+                        controlId="validationCustomUsername"
+                      >
+                        <InputGroup hasValidation>
+                          <Form.Control
+                            type="text"
+                            placeholder="Enter Your Message"
+                            aria-describedby="inputGroupPrepend"
+                            required
+                            as="textarea"
+                            rows={4}
+                          />
+                          <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
+                        </InputGroup>
+                      </Form.Group>
                     </Col>
-                  </Row> <br />
-                  
-                  <Button type="submit" id="btn">Send Message</Button>
+                  </Row>{" "}
+                  <br />
+                  <Button type="submit" id="btn">
+                    Send Message
+                  </Button>
                 </Form>
               </div>
             </Col>
           </Row>
         </Container>
+
+{/* ---------------------------------------FOOTER-------------------------------------------- */}
+
+        <footer>
+          <div id="footer-content">
+            <div className="fs-6">
+              <div className="footer_title">
+                <h5>Khanyisile | Software Developer</h5>
+              </div>
+              <ul>
+                <li>
+                  <Link to="/about"> About</Link>
+                </li>
+                <li>
+                  <Link to="/services"> Services</Link>
+                </li>
+                <li>
+                  <Link to="/portfolio"> Portfolio</Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="footer_title">
+              <div id="icons">
+                <a href="https://m.facebook.com/khanyisile.mdleleni.16?eav=AfYMrSPTI18yWVy7cTOlgkNuds">
+                  <i className="uil uil-facebook"></i>
+                </a>
+                <a href="https://twitter.com/kay_mdleleni/">
+                  <i className="uil uil-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/khanyisile_mdleleni/">
+                  <i className="uil uil-instagram"></i>
+                </a>
+              </div>
+            </div>
+
+            <div className="footer_title">
+              <p>&#169; Khanyisile. All right reserved</p>
+            </div>
+          </div>
+        </footer>
       </div>
     </>
   );
 }
 
-export default Contact
+export default Contact;

@@ -13,7 +13,8 @@ function Skills() {
           backgroundImage: `url(${image})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          height: "790px",
+          minHeight: "100vh",
+          width: '100%'
         }}
       >
         <div id="intro">
