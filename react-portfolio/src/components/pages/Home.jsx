@@ -1,5 +1,6 @@
 import React from 'react'
 import image from '../img/bg.png'
+import { Link } from "react-router-dom";
 import img from '../img/bibo.png'
 
 function Home () { 
@@ -28,7 +29,7 @@ function Home () {
              <h3 id='home-subtitle'>Software Developer</h3>
              <p id='home-description'>Mid level experience in web design and development knowledge, producing quality work.</p><br/><br/>
            <div> 
-            <a href=""><button type="button" id='btn' >Contact Me</button></a>
+           <Link to="/contact"><button type="button" id='btn' >Contact Me</button></Link>
            </div>     
           </div>     
          </div> 
