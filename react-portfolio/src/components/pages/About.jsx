@@ -27,7 +27,7 @@ function About() {
         <div>
           <Container>
             <Row>
-              <Col xs={6} md={4}>
+              <Col>
                 <img
                   src={about}
                   alt=""
@@ -38,7 +38,7 @@ function About() {
                 />
               </Col>
 
-              <Col xs={12} md={8}>
+              <Col>
                 <p className="fs-6">
                   {" "}
                   My primary responsibility is to design, develop and maintain

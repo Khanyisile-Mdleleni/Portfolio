@@ -97,6 +97,7 @@ nav .menu span{
 #home-subtitle{
     white-space: nowrap;
 	overflow: hidden;
+    padding-top: 12px;
 	border-right: 4px solid #fff;
 	animation: cursor 1s step-start infinite, 
     text 4s steps(12) alternate infinite; 
@@ -174,6 +175,8 @@ nav .menu span{
     padding-bottom: 25px;
     padding-top: 3.2rem;
 }
+ /*--------------------------------- Portfolio------------------------------- */
+
 
  /* -----------------------------Footer---------------------------------- */
 
@@ -225,4 +228,6 @@ footer ul li a{
     text-align: center;
     font-size: medium;
  }
+
+
 

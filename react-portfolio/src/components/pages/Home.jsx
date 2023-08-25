@@ -1,41 +1,83 @@
-import React from 'react'
-import image from '../img/bg.png'
+import React from "react";
+import image from "../img/bg.png";
 import { Link } from "react-router-dom";
-import img from '../img/bibo.png'
+import img from "../img/bibo.png";
 
-function Home () { 
-    return (
-      <>
-       <div id='home' 
-       style={{
-        backgroundImage:`url(${image})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        minHeight: "100vh",
-        width: '100%'      }}
-        >
-        
-         <div className='container' id='home-container'>
-           <div id='icons'>
-             <ul>
-               <li><a href="https://www.linkedin.com/in/khanyisile-mdleleni-b77691250/" className="home__social-icon"><i className="uil uil-linkedin"></i></a></li>
-               <li><a href="https://github.com/Khanyisile-Mdleleni" className="home__social-icon"><i className="uil uil-github"></i></a></li>
-               <li><a href="https://m.facebook.com/khanyisile.mdleleni.16?eav=AfYMrSPTI18yWVy7cTOlgkNuds" className="home__social-icon"><i className="uil uil-facebook"></i></a></li>
-             </ul>  
-          
-           </div>
-           <div id='home-content'>
-             <h1 id='home-title'>Hi, I am Khanyisile Mdleleni</h1> 
-             <h3 id='home-subtitle'>Software Developer</h3>
-             <p id='home-description'>Mid level experience in web design and development knowledge, producing quality work.</p><br/><br/>
-           <div> 
-           <Link to="/contact"><button type="button" id='btn' >Contact Me</button></Link>
-           </div>     
-          </div>     
-         </div> 
+function Home() {
+  return (
+    <>
+      <div
+        id="home"
+        style={{
+          backgroundImage: `url(${image})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          minHeight: "100vh",
+          width: "100%",
+        }}
+      >
+        <div className="container" id="home-container">
+          <div id="icons">
+            <ul>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/khanyisile-mdleleni-b77691250/"
+                  className="home__social-icon"
+                >
+                  <i className="uil uil-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Khanyisile-Mdleleni"
+                  className="home__social-icon"
+                >
+                  <i className="uil uil-github"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://m.facebook.com/khanyisile.mdleleni.16?eav=AfYMrSPTI18yWVy7cTOlgkNuds"
+                  className="home__social-icon"
+                >
+                  <i className="uil uil-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="d-grid gap-3">
+            <div id="home-content">
+              <div className="p-2 ">
+                <h1 id="home-title">Hi, I am Khanyisile Mdleleni</h1>
+              </div>
+              <div className="p-2 ">
+                <h3 id="home-subtitle">Software Developer</h3>
+              </div>
+              <div className="p-2 ">
+                <p id="home-description">
+                  Mid level experience in web design and development knowledge.
+                </p>{" "}
+                <br />
+                <div>
+                  <Link to="/contact">
+                    <button type="button" id="btn">
+                      Contact Me
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            {/* <div id="home-img">
+              <img src={img} alt="" style={{
+                position: 'absolute',
+                left: '1040px',
+                top: '450px',
+              }} />
+            </div> */}
+          </div>
         </div>
-      
-      </>   
-    )
-  }
- export default Home
+      </div>
+    </>
+  );
+}
+export default Home;

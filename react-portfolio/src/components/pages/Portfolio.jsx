@@ -30,6 +30,7 @@ function Portfolio() {
             width: "50%"
             
           }}
+          
         >
           <Carousel>
             <Carousel.Item>
