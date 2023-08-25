@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import about from "../img/about.png";
+import pdf from '../Document/khanyisile.pdf'
 
 function About() {
   return (
@@ -80,7 +81,7 @@ function About() {
                 </Row>
                 <br />
                 <div id="about-btn">
-                  <a href="">
+                  <a href={pdf}>
                     <button type="button" id="btn">
                       Download CV
                     </button>
