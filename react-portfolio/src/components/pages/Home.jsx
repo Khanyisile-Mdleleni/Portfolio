@@ -1,7 +1,7 @@
 import React from "react";
 import image from "../img/bg.png";
 import { Link } from "react-router-dom";
-import img from "../img/mern.png";
+import home from "../img/bibo.png";
 
 function Home() {
   return (
@@ -48,8 +48,13 @@ function Home() {
           <div className="d-grid gap-3">
             <div id="home-content">
               <div className="p-2 ">
-                <h1 id="home-title">Hi There !
-                <span id="wave" role="img" aria-labelledby="wave">👋🏻</span> I am Khanyisile Mdleleni</h1>
+                <h1 id="home-title">
+                  Hi There !
+                  <span id="wave" role="img" aria-labelledby="wave">
+                    👋🏻
+                  </span>{" "}
+                  I am Khanyisile Mdleleni
+                </h1>
               </div>
               <div className="p-2 ">
                 <h3 id="home-subtitle">Software Developer</h3>
@@ -57,7 +62,8 @@ function Home() {
               <div className="p-2 ">
                 <p id="home-description">
                   Mid level experience in web design and development knowledge.
-                </p>{"  "}
+                </p>
+                {"  "}
                 <br />
                 <div>
                   <Link to="/contact">

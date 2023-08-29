@@ -69,6 +69,7 @@ nav .menu span{
 @media  (max-width:480px) {
     nav .menu{
         display: flex;
+       
     }
     nav{
         flex-direction: column;
@@ -86,9 +87,7 @@ nav .menu span{
     }
     nav ul li a{
         margin: 0.2rem 0.5rem;
-    }
-    
-    
+    }    
     
 }
 
@@ -120,6 +119,7 @@ nav .menu span{
         transform: rotate(0deg);
     }
 }
+
 #home-subtitle{
     white-space: nowrap;
 	overflow: hidden;
@@ -139,7 +139,7 @@ nav .menu span{
     width: 0; 
   }
 	100% { 
-    width: 21.5ch; 
+    width: 18.5ch; 
   }
 }
 #icons li{
@@ -180,6 +180,7 @@ nav .menu span{
 }
 
 
+
 /* -------------------------Reuseable styles------------------------ */
 #intro{
     text-align: center;
@@ -209,11 +210,94 @@ nav .menu span{
   
     border:3px solid #fff;
 }
- /* -----------------------------About----------------------------------- */
+ 
 
- #about-btn{
+ /*--------------------------------- Qualifications ------------------------------- */
+ .qualification__tabs{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0.25rem;
+  }
+  
+  .qualification__icon{
+    font-size: 1.8rem;
+    margin-right: 0.2rem;
+  }
+  
+  .qualification__data{
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+   
+    
+  }
+  
+ 
+  .qualification__subtitle{
+    display: inline-block;
+    font-size: medium;
+    margin-bottom: 0.1rem;
+  }
+  
+  .qualification__calendar{
+   font-size: medium;
+ 
+  }
+  
+  .qualification__rounder{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: rgba(118, 64, 119,1 );
+    border-radius: 50%;
+  }
+  
+  .qualification__line{
+   display: block;
+   width: 1px;
+   height: 100%;
+   background-color: rgba(118, 64, 119,1 );
+   transform: translate(6px, -7px); 
+  }
+  @media screen and (min-width: 1024px){
+    .qualification__data {
+        width: 50%;
+        margin: 0 auto;
+      }
+  }
+
+  /* --------------------------------Portfolio------------------------------------------ */
+
+  .intro-container {
     text-align: center;
- } 
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-container {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  h4 {
+    margin-bottom: 5px;
+  }
+
  
  /* ----------------------------Contact--------------------------------- */
 
@@ -221,8 +305,6 @@ nav .menu span{
     padding-bottom: 25px;
     padding-top: 3.2rem;
 }
- /*--------------------------------- Portfolio------------------------------- */
-
 
  /* -----------------------------Footer---------------------------------- */
 
@@ -276,4 +358,13 @@ footer ul li a{
  }
 
 
-
+ @media  (max-width:480px) {
+    .about-content {
+        text-align: center;
+       
+    }
+    .services-content {
+        padding-left: 40px;
+    }
+    
+}

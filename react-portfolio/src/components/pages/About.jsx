@@ -24,7 +24,7 @@ function About() {
           <h3 id="subtitle">My Introduction</h3>
         </div>
 
-        <div>
+        <div className="about-content">
           <Container>
             <Row>
               <Col>
@@ -34,6 +34,7 @@ function About() {
                   style={{
                     width: "250px",
                     height: "250px",
+                    
                   }}
                 />
               </Col>
@@ -69,21 +70,12 @@ function About() {
                       Completed <br /> projects
                     </span>
                   </Col>
-                  <Col xs={6} md={4}>
-                    <span className="fs-6">
-                      <b>01+</b>
-                    </span>
-                    <span className="fs-6">
-                      {" "}
-                      Companies <br /> worked
-                    </span>
-                  </Col>
                 </Row>
                 <br />
                 <div id="about-btn">
                   <a href={pdf}>
                     <button type="button" id="btn">
-                      Download CV
+                      Download CV <i className="uil uil-download-alt"></i>
                     </button>
                   </a>
                 </div>

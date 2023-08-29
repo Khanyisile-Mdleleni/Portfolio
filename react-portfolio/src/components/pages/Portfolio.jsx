@@ -15,7 +15,6 @@ function Portfolio() {
       title: "Memory Game",
       link: "https://ephemeral-rolypoly-338eb0.netlify.app/",
     },
-    // Add more items as needed
   ];
   return (
     <>
@@ -34,7 +33,7 @@ function Portfolio() {
           <h3 id="subtitle">Most recent work</h3>
         </div>{" "}
         <div
-          className="container "
+          className="container"
           style={{
             width: "50%",
           }}
