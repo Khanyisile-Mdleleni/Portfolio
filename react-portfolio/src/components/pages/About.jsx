@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import about from "../img/about.png";
-import pdf from '../Document/khanyisile.pdf'
+import pdf from "../Document/khanyisile.pdf";
 
 function About() {
   return (
@@ -16,7 +16,7 @@ function About() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           minHeight: "100vh",
-          width: '100%'
+          width: "100%",
         }}
       >
         <div id="intro">

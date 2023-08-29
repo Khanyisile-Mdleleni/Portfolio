@@ -64,6 +64,8 @@ nav .menu span{
     background-color: #fff;
 } 
 
+ /* ---------------------------Mobile display------------------------------------ */
+
 @media  (max-width:480px) {
     nav .menu{
         display: flex;
@@ -86,6 +88,8 @@ nav .menu span{
         margin: 0.2rem 0.5rem;
     }
     
+    
+    
 }
 
 /* ---------------------------------Home--------------------------- */
@@ -93,6 +97,28 @@ nav .menu span{
    color: #fff;
    padding-top: 42px;
    font-size: x-large;
+}
+#wave {
+    -webkit-animation-duration: 3.1s;
+    animation-duration: 2.1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: wave-animation;
+    animation-name: wave-animation;
+    display: inline-block;
+    -webkit-transform-origin: 70% 70%;
+    transform-origin: 70% 70%;
+}
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 #home-subtitle{
     white-space: nowrap;
@@ -136,6 +162,22 @@ nav .menu span{
 #home-container{
     display: flex;
 }
+@media (max-width: 768px) {
+    #home {
+        font-size: large;
+        padding-top: 20px;
+    }
+
+    #home-content {
+        padding: 20px;
+    }
+
+    #icons li {
+        padding-bottom: 15px;
+        padding-top: 1rem;
+        font-size: medium;
+    }
+}
 
 
 /* -------------------------Reuseable styles------------------------ */
@@ -162,6 +204,10 @@ nav .menu span{
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
+}
+#btn:hover{
+  
+    border:3px solid #fff;
 }
  /* -----------------------------About----------------------------------- */
 
