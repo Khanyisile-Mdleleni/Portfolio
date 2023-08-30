@@ -206,10 +206,7 @@ nav .menu span{
     transition-duration: 0.4s;
     cursor: pointer;
 }
-#btn:hover{
-  
-    border:3px solid #fff;
-}
+
  
 
  /*--------------------------------- Qualifications ------------------------------- */
@@ -266,38 +263,52 @@ nav .menu span{
       }
   }
 
+   /* --------------------------------Services------------------------------------------ */
+
+  @media  (max-width:480px) {
+    .about-content {
+        text-align: center;
+       
+    }
+    .services-content {
+        padding-left: 40px;
+    }
+    
+}
+
   /* --------------------------------Portfolio------------------------------------------ */
 
-  .intro-container {
+  .container-portfolio {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+   
+  }
+  
+  #my-card {
+    background:none;
     text-align: center;
-    padding: 20px;
+    overflow: hidden;
+    max-height: auto;
+    
   }
   
-  .title {
-    font-size: 2rem;
+  #my-card img {
+    max-width: 90%;
+    height: auto;
     margin-bottom: 10px;
-  }
-  
-  .subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .carousel-container {
-    width: 100%;
-    padding: 20px;
-  }
-  
-  .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  h4 {
-    margin-bottom: 5px;
+    padding-left: 40px;
+    margin-top: 10px;
   }
 
+  .slick-dots li button:before {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #dfdfdf;
+  }
  
  /* ----------------------------Contact--------------------------------- */
 
@@ -358,13 +369,15 @@ footer ul li a{
  }
 
 
- @media  (max-width:480px) {
-    .about-content {
-        text-align: center;
-       
-    }
-    .services-content {
-        padding-left: 40px;
-    }
-    
-}
+
+
+
+
+
+
+
+
+ 
+
+  
+  

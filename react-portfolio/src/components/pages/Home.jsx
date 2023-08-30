@@ -68,7 +68,7 @@ function Home() {
                 <div>
                   <Link to="/contact">
                     <button type="button" id="btn">
-                      Contact Me
+                      Contact Me <i className="uil uil-message"></i>
                     </button>
                   </Link>
                 </div>

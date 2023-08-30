@@ -1,21 +1,21 @@
-import Carousel from "react-bootstrap/Carousel";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import image from "../img/bg.png";
 import memory from "../img/memory.png";
 import school from "../img/school.png";
+import biz from "../img/biz.jpg";
 
 function Portfolio() {
-  const carouselItems = [
-    {
-      imageSrc: school,
-      title: "Mzamomtsha Primary website",
-      link: "https://mzamomtsha-primary-school.netlify.app/",
-    },
-    {
-      imageSrc: memory,
-      title: "Memory Game",
-      link: "https://ephemeral-rolypoly-338eb0.netlify.app/",
-    },
-  ];
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 400,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: true,
+  };
   return (
     <>
       <div
@@ -32,33 +32,46 @@ function Portfolio() {
           <h1 id="title">Portfolio</h1>
           <h3 id="subtitle">Most recent work</h3>
         </div>{" "}
-        <div
-          className="container"
-          style={{
-            width: "50%",
-          }}
-        >
-          <Carousel>
-            {carouselItems.map((item, index) => (
-              <Carousel.Item key={index}>
-                <img
-                  className="img-fluid w-100"
-                  src={item.imageSrc}
-                  alt={`Slide ${index}`}
-                />
-                <Carousel.Caption>
-                  <h4>{item.title}</h4>
-                  <div id="about-btn">
-                    <a href={item.link}>
-                      <button type="button" id="btn">
-                        View Project
-                      </button>
-                    </a>
-                  </div>
-                </Carousel.Caption>
-              </Carousel.Item>
-            ))}
-          </Carousel>
+
+        <div className="portfolio">
+          <div className="container-portfolio">
+
+            <Slider {...settings}>
+              <div id="my-card">
+                <img src={school} alt="" />
+                <div className="caption">Mzamomtsha Project</div>
+                <a href="https://mzamomtsha-primary-school.netlify.app/">
+                  {" "}
+                  <button className="image-button" id="btn">
+                    View Project <i className="uil uil-arrow-right"></i>
+                  </button>
+                </a>
+              </div>
+
+              <div id="my-card">
+                <img src={memory} alt="" />
+                <div className="caption">Memory Game</div>
+                <a href="https://ephemeral-rolypoly-338eb0.netlify.app/">
+                  {" "}
+                  <button className="image-button" id="btn">
+                    View Project <i className="uil uil-arrow-right"></i>
+                  </button>
+                </a>
+              </div>
+
+              <div id="my-card">
+                <img src={biz} alt="" />
+                <div className="caption">Business Card</div>
+                <a href="">
+                  {" "}
+                  <button className="image-button" id="btn">
+                    View Project <i className="uil uil-arrow-right"></i>
+                  </button>
+                </a>
+              </div>
+
+            </Slider>
+          </div>
         </div>
       </div>
     </>
