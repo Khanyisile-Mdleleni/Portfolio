@@ -12,13 +12,13 @@ import Modal from "react-bootstrap/Modal";
 
 function Contact() {
   const [showModal, setShowModal] = useState(false);
+  const [validated, setValidated] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleCloseModal = () => {
     setShowModal(false);
+    setFormSubmitted(false); // Reset the formSubmitted state
   };
-
-  const [validated, setValidated] = useState(false);
-  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -163,7 +163,7 @@ function Contact() {
               Close
             </Button>
           </Modal.Footer>
-        </Modal> 
+        </Modal>  
 
         {/* ---------------------------------------Footer-------------------------------------------- */}
 

@@ -232,6 +232,9 @@ function Services() {
                 <li>
                   Implements responses to what the front-end has initiated.
                 </li>
+                <li>
+                  Creating databases.
+                </li>
               </ul>
               <img
                 src={js}
