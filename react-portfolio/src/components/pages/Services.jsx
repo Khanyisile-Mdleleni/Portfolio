@@ -12,6 +12,7 @@ import html from "../img/html.png";
 import js from "../img/js.png";
 import react from "../img/react.png";
 import node from "../img/node.png";
+import firebase from "../img/firebase.png";
 
 function Services() {
   const [show, setShow] = useState(false);
@@ -42,7 +43,7 @@ function Services() {
           <h3 id="subtitle">What I offer</h3>
           <br />
         </div>
-        
+
         <div className="services-content">
           <Container>
             <Row className="justify-content-md-center">
@@ -232,9 +233,7 @@ function Services() {
                 <li>
                   Implements responses to what the front-end has initiated.
                 </li>
-                <li>
-                  Creating databases.
-                </li>
+                <li>Creating databases.</li>
               </ul>
               <img
                 src={js}
@@ -246,6 +245,14 @@ function Services() {
               />
               <img
                 src={node}
+                alt=""
+                style={{
+                  width: "70px",
+                  height: "30px",
+                }}
+              />
+              <img
+                src={firebase}
                 alt=""
                 style={{
                   width: "70px",

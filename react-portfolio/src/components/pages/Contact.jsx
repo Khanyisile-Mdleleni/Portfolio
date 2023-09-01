@@ -32,6 +32,7 @@ function Contact() {
 
     setValidated(true);
   };
+  
   return (
     <>
       <div
@@ -142,7 +143,7 @@ function Contact() {
                       </Col>
                     </Row>{" "}
                     <br />
-                    <Button type="submit" id="btn" onSubmit={showModal}>
+                    <Button type="submit" id="btn" onSubmit={showModal} >
                       Send Message <i className="uil uil-message"></i>
                     </Button>
                   </Form>
