@@ -8,17 +8,38 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import { Link } from "react-router-dom";
-import Modal from "react-bootstrap/Modal";
+import emailjs from "emailjs-com";
 
 function Contact() {
-  const [showModal, setShowModal] = useState(false);
+  const [emailData, setEmailData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send("service_lemln3q", "template_cx2fegh", emailData)
+
+      .then(
+        (response) => {
+          console.log("Email sent successfully:", response);
+        },
+        (error) => {
+          console.error("Email could not be sent:", error);
+        }
+      );
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setEmailData({ ...emailData, [name]: value });
+  };
+
   const [validated, setValidated] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-    setFormSubmitted(false); // Reset the formSubmitted state
-  };
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -27,12 +48,11 @@ function Contact() {
       event.stopPropagation();
     } else {
       setFormSubmitted(true);
-      setShowModal(true);
     }
 
     setValidated(true);
   };
-  
+
   return (
     <>
       <div
@@ -50,7 +70,6 @@ function Contact() {
           <h3 id="subtitle">Get in touch</h3>
         </div>{" "}
         <br />
-
         <Container>
           <Row>
             <Col>
@@ -82,92 +101,77 @@ function Contact() {
 
             <Col>
               <div id="form">
-               
-                  <Form
-                    noValidate
-                    validated={validated}
-                    onSubmit={handleSubmit}
-                  >
-                    <Row>
-                      <Col>
-                        <Form.Group
-                          as={Col}
-                          md="8"
-                          controlId="validationCustom01"
-                        >
-                          <Form.Control
-                            required
-                            type="text"
-                            placeholder="Enter your First name"
-                          />
-                          <Form.Control.Feedback></Form.Control.Feedback>
-                        </Form.Group>
-                      </Col>
-                    </Row>{" "}
-                    <br />
-                    <Form.Group
-                      as={Col}
-                      md="8"
-                      controlId="validationCustomUsername"
-                    >
-                      <InputGroup hasValidation>
+                <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                  <Row>
+                    <Col>
+                      <Form.Group
+                        as={Col}
+                        md="8"
+                        controlId="validationCustom01"
+                      >
                         <Form.Control
-                          type="email"
-                          placeholder="Enter your Email"
-                          aria-describedby="inputGroupPrepend"
                           required
+                          type="text"
+                          placeholder="Enter your First name"
+                          name="name"
                         />
-                        <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
-                      </InputGroup>
-                    </Form.Group>
-                    <br />
-                    <Row>
-                      <Col>
-                        <Form.Group
-                          as={Col}
-                          md="8"
-                          controlId="validationCustomUsername"
-                        >
-                          <InputGroup hasValidation>
-                            <Form.Control
-                              type="text"
-                              placeholder="Enter Your Message"
-                              aria-describedby="inputGroupPrepend"
-                              required
-                              as="textarea"
-                              rows={4}
-                            />
-                            <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
-                          </InputGroup>
-                        </Form.Group>
-                      </Col>
-                    </Row>{" "}
-                    <br />
-                    <Button type="submit" id="btn" onSubmit={showModal} >
-                      Send Message <i className="uil uil-message"></i>
-                    </Button>
-                  </Form>
+                        <Form.Control.Feedback></Form.Control.Feedback>
+                      </Form.Group>
+                    </Col>
+                  </Row>{" "}
+                  <br />
+                  <Form.Group
+                    as={Col}
+                    md="8"
+                    controlId="validationCustomUsername"
+                  >
+                    <InputGroup hasValidation>
+                      <Form.Control
+                        type="email"
+                        placeholder="Enter your Email"
+                        aria-describedby="inputGroupPrepend"
+                        name="email"
+                        required
+                      />
+                      <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
+                    </InputGroup>
+                  </Form.Group>
+                  <br />
+                  <Row>
+                    <Col>
+                      <Form.Group
+                        as={Col}
+                        md="8"
+                        controlId="validationCustomUsername"
+                      >
+                        <InputGroup hasValidation>
+                          <Form.Control
+                            type="text"
+                            placeholder="Enter Your Message"
+                            aria-describedby="inputGroupPrepend"
+                            required
+                            as="textarea"
+                            name="message"
+                            rows={4}
+                          />
+                          <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
+                        </InputGroup>
+                      </Form.Group>
+                    </Col>
+                  </Row>{" "}
+                  <br />
+                  <Button type="submit" id="btn">
+                    Send Message <i className="uil uil-message"></i>
+                  </Button>
+                  {formSubmitted && (
+                    <p className="text-success">Message sent successfully!</p>
+                  )}
+                </Form>
               </div>
             </Col>
           </Row>
         </Container>
-
-        {/*------------------------------Modal For Popup Message---------------------------------*/}
-          
-        <Modal show={showModal} onHide={handleCloseModal}>
-          <Modal.Header closeButton>
-            <Modal.Title>Form Submitted</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Your message has been successfully submitted.</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleCloseModal}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal>  
-
         {/* ---------------------------------------Footer-------------------------------------------- */}
-
         <footer>
           <div id="footer-content">
             <div className="fs-6">
@@ -187,7 +191,7 @@ function Contact() {
               </ul>
             </div>
 
-          {/*------------------------------------------- Footer Icons-------------------------------- */}
+            {/*------------------------------------------- Footer Icons-------------------------------- */}
 
             <div className="footer_title">
               <div id="icons">
