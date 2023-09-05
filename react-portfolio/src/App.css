@@ -74,9 +74,7 @@ nav ul li a {
     border-radius: 0.5rem;
     
 }
-/* nav ul li a :hover{
-    color: #fff;
-} */
+
 
 nav ul.open {
     display: flex;
@@ -193,8 +191,8 @@ nav .menu span {
 
 #icons li {
     list-style: none;
-    padding-bottom: 25px;
-    padding-top: 3.2rem;
+    padding-bottom: 15px;
+    padding-top: 5.2rem;
     font-size: larger;
 }
 
@@ -206,12 +204,10 @@ nav .menu span {
     color: #fff;
 }
 
-#home-content {
-    padding-top: 3.5rem;
+#home-content {  
     display: flex;
     flex-direction: column;
-    padding: 60px;
-
+    padding: 120px;
 }
 
 #home-container {
