@@ -1,7 +1,4 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import image from "../img/bg.png";
 
 function Skills() {
@@ -20,7 +17,7 @@ function Skills() {
         <div id="intro">
           <h1 id="titlie">Qualifications</h1>
           <h3 id="subtitle">My Personal Journey</h3>
-        </div>
+        </div> <br />
 
         <div className="qualification__container container">
           <div className="qualification__tabs">

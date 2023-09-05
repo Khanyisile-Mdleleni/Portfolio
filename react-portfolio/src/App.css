@@ -13,9 +13,7 @@
 
 
 /* ----------------------------------Header--------------------------------- */
-.active{
-    background-color: blueviolet;
-}
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -64,8 +62,6 @@ nav .menu span{
     background-color: #fff;
 } 
 
- /* ---------------------------Mobile display------------------------------------ */
-
 @media  (max-width:480px) {
     nav .menu{
         display: flex;
@@ -91,7 +87,9 @@ nav .menu span{
     
 }
 
+
 /* ---------------------------------Home--------------------------- */
+
 #home{
    color: #fff;
    padding-top: 42px;
@@ -225,8 +223,8 @@ nav .menu span{
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
     column-gap: 1.5rem;
+    padding-left: 80px;
    
-    
   }
   
  
@@ -241,27 +239,31 @@ nav .menu span{
  
   }
   
-  .qualification__rounder{
+  .qualification__rounder {
     display: inline-block;
     width: 13px;
     height: 13px;
-    background-color: rgba(118, 64, 119,1 );
+    background-color: rgba(118, 64, 119, 1);
     border-radius: 50%;
-  }
   
-  .qualification__line{
-   display: block;
-   width: 1px;
-   height: 100%;
-   background-color: rgba(118, 64, 119,1 );
-   transform: translate(6px, -7px); 
-  }
+}
+
+
+  
+.qualification__line {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(118, 64, 119, 1);
+    transform: translate(6px, -7px);
+}
   @media screen and (min-width: 1024px){
     .qualification__data {
         width: 50%;
         margin: 0 auto;
       }
   }
+  
 
    /* --------------------------------Services------------------------------------------ */
 
@@ -274,7 +276,9 @@ nav .menu span{
         padding-left: 40px;
     }
     
+    
 }
+
 
   /* --------------------------------Portfolio------------------------------------------ */
 

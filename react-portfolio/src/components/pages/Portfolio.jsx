@@ -13,7 +13,7 @@ function Portfolio() {
     speed: 400,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
     autoplay: true,
   };
   return (
@@ -40,7 +40,7 @@ function Portfolio() {
               <div id="my-card">
                 <img src={school} alt="" />
                 <div className="caption">Mzamomtsha Project</div>
-                <a href="https://mzamomtsha-primary-school.netlify.app/">
+                <a href="https://mzamomtsha-primary-school.netlify.app/"> <br />
                   {" "}
                   <button className="image-button" id="btn">
                     View Project <i className="uil uil-arrow-right"></i>
@@ -51,7 +51,7 @@ function Portfolio() {
               <div id="my-card">
                 <img src={memory} alt="" />
                 <div className="caption">Memory Game</div>
-                <a href="https://ephemeral-rolypoly-338eb0.netlify.app/">
+                <a href="https://ephemeral-rolypoly-338eb0.netlify.app/"> <br />
                   {" "}
                   <button className="image-button" id="btn">
                     View Project <i className="uil uil-arrow-right"></i>
@@ -62,7 +62,7 @@ function Portfolio() {
               <div id="my-card">
                 <img src={biz} alt="" />
                 <div className="caption">Business Card</div>
-                <a href="">
+                <a href=""> <br />
                   {" "}
                   <button className="image-button" id="btn">
                     View Project <i className="uil uil-arrow-right"></i>

@@ -11,6 +11,9 @@ import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
 
 function Contact() {
+
+  // --------------------------------------------Email js---------------------------------
+
   const [emailData, setEmailData] = useState({
     name: "",
     email: "",
@@ -21,7 +24,12 @@ function Contact() {
     e.preventDefault();
 
     emailjs
-      .send("service_lemln3q", "template_cx2fegh", emailData)
+      .send(
+        "service_iwwa848",
+        "template_cx2fegh",
+        emailData,
+        "3JbxCt70QntLe28Rs"
+      )
 
       .then(
         (response) => {
@@ -33,25 +41,28 @@ function Contact() {
       );
   };
 
-  const handleInputChange = (e) => {
+  function handleInputChange(e) {
     const { name, value } = e.target;
     setEmailData({ ...emailData, [name]: value });
-  };
+  }
+
+  // --------------------------------------------------Form Validation---------------------------------
 
   const [validated, setValidated] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const handleSubmit = (event) => {
+  function handleSubmit(event) {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     } else {
+      sendEmail(event);
       setFormSubmitted(true);
     }
 
     setValidated(true);
-  };
+  }
 
   return (
     <>
@@ -65,11 +76,13 @@ function Contact() {
           width: "100%",
         }}
       >
+
         <div id="intro">
           <h1 id="title">Contact Me</h1>
           <h3 id="subtitle">Get in touch</h3>
         </div>{" "}
         <br />
+
         <Container>
           <Row>
             <Col>
@@ -114,6 +127,7 @@ function Contact() {
                           type="text"
                           placeholder="Enter your First name"
                           name="name"
+                          onChange={handleInputChange}
                         />
                         <Form.Control.Feedback></Form.Control.Feedback>
                       </Form.Group>
@@ -131,6 +145,7 @@ function Contact() {
                         placeholder="Enter your Email"
                         aria-describedby="inputGroupPrepend"
                         name="email"
+                        onChange={handleInputChange}
                         required
                       />
                       <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
@@ -152,6 +167,7 @@ function Contact() {
                             required
                             as="textarea"
                             name="message"
+                            onChange={handleInputChange}
                             rows={4}
                           />
                           <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
@@ -171,6 +187,7 @@ function Contact() {
             </Col>
           </Row>
         </Container>
+        
         {/* ---------------------------------------Footer-------------------------------------------- */}
         <footer>
           <div id="footer-content">

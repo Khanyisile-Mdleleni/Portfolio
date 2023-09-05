@@ -13,6 +13,7 @@ import js from "../img/js.png";
 import react from "../img/react.png";
 import node from "../img/node.png";
 import firebase from "../img/firebase.png";
+import ui from "../img/ui-ux.jpg";
 
 function Services() {
   const [show, setShow] = useState(false);
@@ -20,7 +21,7 @@ function Services() {
   const [slide, setSlide] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShut = () => setPop(false);
+  const handleShut = () => setPop(false); 
   const handleHide = () => setSlide(false);
 
   const handleShow = () => setShow(true);
@@ -48,30 +49,18 @@ function Services() {
           <Container>
             <Row className="justify-content-md-center">
               <Col md="auto">
-                <Card
-                  style={{
+                <Card   style={{
                     width: "16rem",
-                    backgroundColor: "rgba(118, 64, 119,1 )",
-                    height: "16rem",
+                    height: "14rem",
                     position: "static",
-                  }}
-                >
+                  }}>
+                  <Card.Img src={ui} />
                   <Card.Body>
-                    <Card.Title className="text-center, fs-3">
-                      <i className="uil uil-web-grid-alt"></i> UI/UX Design
-                    </Card.Title>
-                    <br />
-                    <br />
-                    <div className="text-center">
-                      <Card.Link>
-                        <Button variant="info-emphasis" onClick={handleShow}>
-                          View more <i className="uil uil-arrow-right"></i>
-                        </Button>
-                      </Card.Link>
-                    </div>
+                    <Card.Text>
+                      Frontend Developer
+                    </Card.Text>
                   </Card.Body>
-                </Card>{" "}
-                <br />
+                </Card>
               </Col>
 
               <Col md="auto">
@@ -93,7 +82,7 @@ function Services() {
                       <Card.Link>
                         <Button variant="info-emphasis" onClick={handlePop}>
                           View more <i className="uil uil-arrow-right"></i>
-                        </Button>
+                         </Button>
                       </Card.Link>
                     </div>
                   </Card.Body>
@@ -129,6 +118,8 @@ function Services() {
               </Col>
             </Row>
           </Container>
+
+          {/* -----------------------------------Bootstrap Modals--------------------------------- */}
 
           <Modal show={show} onHide={handleClose}>
             <Modal.Header
