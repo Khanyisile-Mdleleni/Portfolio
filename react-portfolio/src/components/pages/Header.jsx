@@ -16,7 +16,7 @@ function Header() {
         <ul className={menuOpen ? 'open' : ''}>
             
             <li>
-                <Link to='/home'> Home</Link>
+                <Link to='/home' > Home</Link>
             </li>
             <li>
                 <Link  to='/about'> About</Link>

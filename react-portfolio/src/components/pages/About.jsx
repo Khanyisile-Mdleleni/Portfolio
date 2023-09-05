@@ -3,8 +3,9 @@ import image from "../img/bg.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import about from "../img/about.png";
+import about from "../img/khanyisile.png";
 import pdf from "../Document/khanyisile.pdf";
+
 
 function About() {
   return (
@@ -22,24 +23,26 @@ function About() {
         <div id="intro">
           <h1 id="title">About</h1>
           <h3 id="subtitle">My Introduction</h3>
-        </div>
+        </div> <br />
 
         <div className="about-content">
           <Container>
             <Row>
-              <Col>
+              <Col sm={5}>
+              <div className="about-image"> 
                 <img
                   src={about}
                   alt=""
                   style={{
-                    width: "250px",
-                    height: "250px",
+                    width: "300px",
+                    height: "300px",
                     
                   }}
                 />
+                </div>
               </Col>
 
-              <Col>
+              <Col sm={7}>
                 <p className="fs-6">
                   {" "}
                   My primary responsibility is to design, develop and maintain
