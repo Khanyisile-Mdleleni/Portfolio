@@ -9,7 +9,7 @@
 
 # Description.
 
-Welcome to our project! This is my portfolio website made in React js, CSS, Bootstrap, and JavaScript. 
+Welcome to my project! This is my portfolio website made in React js, CSS, Bootstrap, and JavaScript. 
 It enables users to access any information they want quickly and easily about myself, and on any device. 
 I hope you enjoy it, and  looking forward to your contributions!
 
