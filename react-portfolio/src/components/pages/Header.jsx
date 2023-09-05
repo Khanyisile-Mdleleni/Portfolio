@@ -4,7 +4,7 @@ import React, {useState} from 'react'
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false)
   return (
-    <nav>
+    <nav className='stroke'>
            <Link to='/' className='title'> K || M</Link>
            <div className="menu" onClick={()=>{
             setMenuOpen(!menuOpen)

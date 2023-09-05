@@ -33,10 +33,36 @@ nav .title {
 
 nav ul {
     display: flex;
+    
 }
 
 nav ul li {
     list-style: none;
+    text-decoration: none;
+    
+}
+nav :hover{
+ color: #fff;
+ 
+}
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #fff;
+  height: 2px;
+}
+nav.stroke ul li a:hover:after {
+  width: 50%;
 }
 
 nav ul li a {
@@ -46,7 +72,11 @@ nav ul li a {
     padding: 0.21rem;
     margin: 0 0.5rem;
     border-radius: 0.5rem;
+    
 }
+/* nav ul li a :hover{
+    color: #fff;
+} */
 
 nav ul.open {
     display: flex;
@@ -172,8 +202,8 @@ nav .menu span {
     color: rgba(118, 64, 119, 1);
 }
 
-#icons ul li a {
-    color: rgba(118, 64, 119, 1);
+#icons ul li a:hover{
+    color: #fff;
 }
 
 #home-content {
