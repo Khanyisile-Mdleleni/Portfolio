@@ -17,8 +17,8 @@ function Skills() {
         <div id="intro">
           <h1 id="titlie">Qualifications</h1>
           <h3 id="subtitle">My Personal Journey</h3>
-        </div> <br />
-
+        </div>{" "}
+        <br />
         <div className="qualification__container container">
           <div className="qualification__tabs">
             <div className="qualification__button button--flex">
@@ -29,11 +29,10 @@ function Skills() {
               <i className="uil uil-briefcase-alt qualification__icon"></i>
               Work
             </div>
-          </div> <br />
-
+          </div>{" "}
+          <br />
           <div className="qualification__sections">
             <div className="qualification__content">
-
               {/*--==================== Qualification 1====================-- */}
               <div className="qualification__data">
                 <div>
