@@ -89,16 +89,13 @@ function Contact() {
               <div id="icons" className="fs-6">
                 <ul>
                   <li>
+                    <p></p>
+                  </li>
+                  <li>
                     <a href="">
                       <i className="uil uil-envelope"></i>
                     </a>{" "}
                     khanyisilemdleleni@gmail.com
-                  </li>
-                  <li>
-                    <a href="">
-                      <i className="uil uil-phone"></i>
-                    </a>{" "}
-                    063 109 8090
                   </li>
                   <li>
                     <a href="">
@@ -212,14 +209,14 @@ function Contact() {
 
             <div className="footer_title">
               <div id="icons">
-                <a href="https://m.facebook.com/khanyisile.mdleleni.16?eav=AfYMrSPTI18yWVy7cTOlgkNuds">
-                  <i className="uil uil-facebook"></i>
+                <a href="https://github.com/Khanyisile-Mdleleni">
+                  <i className="uil uil-github"></i>
                 </a>
                 <a href="https://twitter.com/kay_mdleleni/">
                   <i className="uil uil-twitter"></i>
                 </a>
-                <a href="https://www.instagram.com/khanyisile_mdleleni/">
-                  <i className="uil uil-instagram"></i>
+                <a href="https://www.linkedin.com/in/khanyisile-mdleleni-b77691250/">
+                  <i className="uil uil-linkedin"></i>
                 </a>
               </div>
             </div>

@@ -12,8 +12,7 @@
     box-sizing: border-box;
 }
 
-
-/* ----------------------------------Header--------------------------------- */
+/* ======================================= Header ============================================ */
 
 nav {
     display: flex;
@@ -79,7 +78,6 @@ nav ul li a {
 
 }
 
-
 nav ul.open {
     display: flex;
 }
@@ -132,7 +130,7 @@ nav .menu span {
 }
 
 
-/* ---------------------------------Home--------------------------- */
+/* ================================================== Home ============================================= */
 
 #home {
     color: #fff;
@@ -196,7 +194,7 @@ nav .menu span {
 #icons li {
     list-style: none;
     padding-bottom: 15px;
-    padding-top: 5.2rem;
+    padding-top: 3.2rem;
     font-size: larger;
 }
 
@@ -211,7 +209,7 @@ nav .menu span {
 #home-content {
     display: flex;
     flex-direction: column;
-    padding: 120px;
+    padding: 50px;
 }
 
 #home-container {
@@ -235,7 +233,7 @@ nav .menu span {
     }
 }
 
-/* -----------------------------------------About------------------------------------ */
+/* =============================================== About ======================================= */
 
 @media (max-width:480px) {
     .about-content {
@@ -249,7 +247,8 @@ img.framed {
     width: 300px;
 }
 
-/* -------------------------Reuseable styles------------------------ */
+/*===================================== Reuseable styles ============================================*/
+
 #intro {
     text-align: center;
 }
@@ -276,10 +275,14 @@ img.framed {
     transition-duration: 0.4s;
     cursor: pointer;
 }
+#btn:hover{
+    background-color:transparent;
+    border: 2px solid rgba(118, 64, 119, 1);
+}
 
 
 
-/*--------------------------------- Qualifications ------------------------------- */
+/*=============================================== Qualifications ============================================ */
 
 .qualification__tabs {
     display: flex;
@@ -337,10 +340,10 @@ img.framed {
 }
 
 
-/* --------------------------------Services------------------------------------------ */
+/*==================================================== Services ===================================================*/
 
 .container-services {
-    position: relative;
+    position: static;
     width: 1160px;
     display: flex;
     justify-content: center;
@@ -351,7 +354,7 @@ img.framed {
 }
 
 .container-services .box {
-    position: relative;
+    position: static;
     width: 275px;
     height: 275px;
     background: #000;
@@ -451,9 +454,29 @@ img.framed {
     transform: translateY(0px);
 }
 
+@media (max-width: 768px) {
+    .container-services{
+        width: 350px;
+    }
+    .container-services:hover .box {
+        transform: rotateY(2deg);
+    }
+    
+    .container-services .box:hover~.box {
+        transform: rotateY(2deg);
+    }
+    
+    .container-services .box:hover {
+        transform: rotateY(0deg) scale(1.25);
+        z-index: 1;
+        box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+    }
+    
+    
+}
 
 
-/* --------------------------------Portfolio------------------------------------------ */
+/*============================================== Portfolio ============================================ */
 
 .container-portfolio {
     max-width: 600px;
@@ -487,14 +510,14 @@ img.framed {
     color: #dfdfdf;
 }
 
-/* ----------------------------Contact--------------------------------- */
+/*=========================================== Contact ============================================= */
 
 #form {
     padding-bottom: 25px;
     padding-top: 3.2rem;
 }
 
-/* -----------------------------Footer---------------------------------- */
+/*=========================================== Footer ===============================================*/
 
 footer {
     display: flex;
@@ -547,4 +570,8 @@ footer ul li a {
     width: 100%;
     text-align: center;
     font-size: medium;
+}
+footer :hover {
+    color: #fff;
+
 }
