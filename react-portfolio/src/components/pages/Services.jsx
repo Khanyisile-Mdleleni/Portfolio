@@ -30,10 +30,61 @@ function Services() {
         </div>
 
         <div className="container-services">
-        <div className="images">
-          <img src={ui} alt="" /> <br />
-          <img src={front} alt="" /> <br />
-          <img src={back} alt="" /> <br />
+          <div className="box">
+            <div className="imgBx">
+              <img src={ui} />
+            </div>
+            <div className="content">
+              <div>
+                <h2>UI/UX Design</h2>
+                <p>
+                  <ul>
+                    <li> Designing engaging and responsive landing pages.</li>
+                    <li>
+                      {" "}
+                      Creating the design and layout of a website or web pages.
+                    </li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="box">
+            <div className="imgBx">
+              <img src={front} />
+            </div>
+            <div className="content">
+              <div>
+                <h2>Frontend Developer</h2>
+                <p>
+                  <ul>
+                    <li>
+                      Uses frameworks like react to create user-friendly web
+                      pages.
+                    </li>
+                    <li>Create quality mockups and prototypes.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="box">
+            <div className="imgBx">
+              <img src={back} />
+            </div>
+            <div className="content">
+              <div>
+                <h2>Backend Developer</h2>
+                <p>
+                  <ul>
+                    <li>
+                      Implements responses to what the front-end has initiated.
+                    </li>
+                    <li>Creating databases.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
