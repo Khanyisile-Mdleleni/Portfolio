@@ -5,7 +5,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import about from "../img/khanyisile.png";
 import pdf from "../Document/khanyisile.pdf";
-
+import figma from "../img/figma.png";
+import html from "../img/html.png";
+import js from "../img/js.png";
+import react from "../img/react.png";
+import node from "../img/node.png";
+import firebase from "../img/firebase.png";
 
 function About() {
   return (
@@ -23,23 +28,13 @@ function About() {
         <div id="intro">
           <h1 id="title">About</h1>
           <h3 id="subtitle">My Introduction</h3>
-        </div> <br />
-
+        </div>{" "}
+        <br />
         <div className="about-content">
           <Container>
             <Row>
               <Col sm={5}>
-              <div className="about-image"> 
-                <img
-                  src={about}
-                  alt=""
-                  style={{
-                    width: "300px",
-                    height: "300px",
-                    
-                  }}
-                />
-                </div>
+              <img className="framed" src={about} alt=""/>
               </Col>
 
               <Col sm={7}>
