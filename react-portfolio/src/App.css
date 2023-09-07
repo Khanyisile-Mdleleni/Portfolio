@@ -22,6 +22,7 @@ nav {
     padding: 10px 40px;
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 
@@ -91,6 +92,7 @@ nav .menu {
     justify-content: space-between;
     width: 2.25rem;
     height: 2rem;
+
 }
 
 nav .menu span {
@@ -125,6 +127,9 @@ nav .menu span {
 
     nav ul li a {
         margin: 0.2rem 0.5rem;
+    }
+    nav.stroke ul li a:hover:after {
+        width: 20%;
     }
 
 }
@@ -275,8 +280,9 @@ img.framed {
     transition-duration: 0.4s;
     cursor: pointer;
 }
-#btn:hover{
-    background-color:transparent;
+
+#btn:hover {
+    background-color: transparent;
     border: 2px solid rgba(118, 64, 119, 1);
 }
 
@@ -336,14 +342,23 @@ img.framed {
     .qualification__data {
         width: 50%;
         margin: 0 auto;
+
     }
+}
+
+@media (max-width:480px) {
+    .qualification__data {
+
+        padding-left: 10px;
+    }
+
 }
 
 
 /*==================================================== Services ===================================================*/
 
 .container-services {
-    position: static;
+    position: relative;
     width: 1160px;
     display: flex;
     justify-content: center;
@@ -354,7 +369,7 @@ img.framed {
 }
 
 .container-services .box {
-    position: static;
+    position: relative;
     width: 275px;
     height: 275px;
     background: #000;
@@ -454,26 +469,42 @@ img.framed {
     transform: translateY(0px);
 }
 
-@media (max-width: 768px) {
-    .container-services{
-        width: 350px;
+@media (max-width:480px) {
+    .container-services {
+        width: 300px;
     }
+
     .container-services:hover .box {
         transform: rotateY(2deg);
     }
-    
+
     .container-services .box:hover~.box {
         transform: rotateY(2deg);
     }
-    
+
     .container-services .box:hover {
         transform: rotateY(0deg) scale(1.25);
         z-index: 1;
         box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
     }
-    
-    
+
 }
+
+@media (min-width: 768px) {
+    .container-services {
+        width: 700px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .container-services {
+        width: 1160px;
+    }
+
+}
+
+
 
 
 /*============================================== Portfolio ============================================ */
@@ -571,6 +602,7 @@ footer ul li a {
     text-align: center;
     font-size: medium;
 }
+
 footer :hover {
     color: #fff;
 
