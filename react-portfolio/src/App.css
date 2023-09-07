@@ -102,6 +102,7 @@ nav .menu span {
     background-color: #fff;
 }
 
+
 @media (max-width:480px) {
     nav .menu {
         display: flex;

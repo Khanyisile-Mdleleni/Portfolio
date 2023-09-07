@@ -12,7 +12,6 @@ import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "emailjs-com";
 
 function Contact() {
-
   // --------------------------------------------Email js---------------------------------
 
   const [emailData, setEmailData] = useState({
@@ -52,7 +51,7 @@ function Contact() {
   }
 
   // --------------------------------------------------Form Validation---------------------------------
-  
+
   const [formReset, setFormReset] = useState(false);
   const [validated, setValidated] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -66,7 +65,7 @@ function Contact() {
       sendEmail(event);
       setFormSubmitted(true);
     }
-  
+
     setValidated(true);
     setFormReset(true);
   }
@@ -83,21 +82,22 @@ function Contact() {
           width: "100%",
         }}
       >
-
         <div id="intro">
           <h1 id="title">Contact Me</h1>
           <h3 id="subtitle">Get in touch</h3>
         </div>{" "}
         <br />
-
         <Container>
           <Row>
             <Col>
               <div id="icons" className="fs-6">
                 <ul>
                   <li>
-                    <p></p>
-                  </li>
+                    <a href="">
+                      <i className="uil uil-phone"></i>
+                    </a>{" "}
+                    068 607 6036
+                  </li> 
                   <li>
                     <a href="">
                       <i className="uil uil-envelope"></i>
@@ -132,8 +132,6 @@ function Contact() {
                           placeholder="Enter your First name"
                           name="name"
                           onChange={handleInputChange}
-                          key={formReset ? "reset" : "normal"}
-                        
                         />
                         <Form.Control.Feedback></Form.Control.Feedback>
                       </Form.Group>
@@ -152,7 +150,6 @@ function Contact() {
                         aria-describedby="inputGroupPrepend"
                         name="email"
                         onChange={handleInputChange}
-                        key={formReset ? "reset" :"normal"}
                         required
                       />
                       <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
@@ -175,7 +172,6 @@ function Contact() {
                             as="textarea"
                             name="message"
                             onChange={handleInputChange}
-                              key={formReset ? "reset" : "normal"}
                             rows={4}
                           />
                           <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
@@ -184,11 +180,11 @@ function Contact() {
                     </Col>
                   </Row>{" "}
                   <br />
-                    <ReCAPTCHA
-                      sitekey="6Lfc8QcoAAAAAFdz7aA7dXGX5cwCwbge4gpkEP5y"
-                      onChange={onChange}
-                    />
-                    <br />
+                  <ReCAPTCHA
+                    sitekey="6Lfc8QcoAAAAAFdz7aA7dXGX5cwCwbge4gpkEP5y"
+                    onChange={onChange}
+                  />
+                  <br />
                   <Button type="submit" id="btn">
                     Send Message <i className="uil uil-message"></i>
                   </Button>
@@ -200,7 +196,6 @@ function Contact() {
             </Col>
           </Row>
         </Container>
-        
         {/* ---------------------------------------Footer-------------------------------------------- */}
         <footer>
           <div id="footer-content">
@@ -238,7 +233,7 @@ function Contact() {
             </div>
 
             <div className="footer_title">
-              <p>&#169; Khanyisile. All right reserved</p>
+              <p>&#169; Khanyisile 2023. All right reserved</p>
             </div>
           </div>
         </footer>
