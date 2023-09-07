@@ -8,6 +8,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import { Link } from "react-router-dom";
+import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "emailjs-com";
 
 function Contact() {
@@ -46,8 +47,13 @@ function Contact() {
     setEmailData({ ...emailData, [name]: value });
   }
 
-  // --------------------------------------------------Form Validation---------------------------------
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
 
+  // --------------------------------------------------Form Validation---------------------------------
+  
+  const [formReset, setFormReset] = useState(false);
   const [validated, setValidated] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
@@ -60,8 +66,9 @@ function Contact() {
       sendEmail(event);
       setFormSubmitted(true);
     }
-
+  
     setValidated(true);
+    setFormReset(true);
   }
 
   return (
@@ -125,6 +132,8 @@ function Contact() {
                           placeholder="Enter your First name"
                           name="name"
                           onChange={handleInputChange}
+                          key={formReset ? "reset" : "normal"}
+                        
                         />
                         <Form.Control.Feedback></Form.Control.Feedback>
                       </Form.Group>
@@ -143,6 +152,7 @@ function Contact() {
                         aria-describedby="inputGroupPrepend"
                         name="email"
                         onChange={handleInputChange}
+                        key={formReset ? "reset" :"normal"}
                         required
                       />
                       <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
@@ -165,6 +175,7 @@ function Contact() {
                             as="textarea"
                             name="message"
                             onChange={handleInputChange}
+                              key={formReset ? "reset" : "normal"}
                             rows={4}
                           />
                           <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
@@ -173,6 +184,11 @@ function Contact() {
                     </Col>
                   </Row>{" "}
                   <br />
+                    <ReCAPTCHA
+                      sitekey="6Lfc8QcoAAAAAFdz7aA7dXGX5cwCwbge4gpkEP5y"
+                      onChange={onChange}
+                    />
+                    <br />
                   <Button type="submit" id="btn">
                     Send Message <i className="uil uil-message"></i>
                   </Button>

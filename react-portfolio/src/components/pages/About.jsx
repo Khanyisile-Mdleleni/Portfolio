@@ -6,7 +6,6 @@ import Col from "react-bootstrap/Col";
 import about from "../img/khanyisile.png";
 import pdf from "../Document/khanyisile.pdf";
 
-
 function About() {
   return (
     <>
@@ -61,9 +60,9 @@ function About() {
                     <span className="fs-6">
                       {" "}
                       Completed <br /> projects
-                    </span> 
+                    </span>
                   </Col>
-                </Row> 
+                </Row>
                 <br />
                 <div id="about-btn">
                   <a href={pdf}>
@@ -75,7 +74,6 @@ function About() {
               </Col>
             </Row>
           </Container>{" "}
-          <br />
         </div>
       </div>
     </>
