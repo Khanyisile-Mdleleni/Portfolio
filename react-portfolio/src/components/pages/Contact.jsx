@@ -52,10 +52,10 @@ function Contact() {
 
   // --------------------------------------------------Form Validation---------------------------------
 
-  const [formReset, setFormReset] = useState(false);
   const [validated, setValidated] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
-
+  const [formReset, setFormReset] = useState(false);
+  
   function handleSubmit(event) {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -64,10 +64,11 @@ function Contact() {
     } else {
       sendEmail(event);
       setFormSubmitted(true);
+      setValidated(false);
+      setFormReset(true);
     }
-
     setValidated(true);
-    setFormReset(true);
+    form.reset();
   }
 
   return (
@@ -97,7 +98,7 @@ function Contact() {
                       <i className="uil uil-phone"></i>
                     </a>{" "}
                     068 607 6036
-                  </li> 
+                  </li>
                   <li>
                     <a href="">
                       <i className="uil uil-envelope"></i>
