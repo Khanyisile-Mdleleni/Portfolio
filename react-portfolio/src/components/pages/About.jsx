@@ -74,6 +74,64 @@ function About() {
               </Col>
             </Row>
           </Container>{" "}
+          <br />
+
+          {/*-------------------------------------------------- Skills ----------------------------------------------- */}
+          <div
+        id="home"
+        style={{
+          backgroundImage: `url(${image})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          minHeight: "100vh",
+          width: "100%",
+        }}
+      >
+          <div id="intro">
+            <h1 id="title">Skills</h1>
+            <h3 id="subtitle">My Technical Level</h3>
+          </div>{" "}
+          <main className="wrapper">
+            <article className="badge orange">
+              <div className="rounded">
+                <i className="fab fa-html5 skills-icons"></i>
+              </div>
+            </article>
+            <article className="badge blue">
+              <div className="rounded">
+                <i className="fab fa-css3-alt skills-icons"></i>
+              </div>
+            </article>
+            <article className="badge gold">
+              <div className="rounded">
+                <i className="fab fa-js-square skills-icons"></i>
+              </div>
+            </article>
+            <article className="badge red">
+              <div className="rounded">
+                <i className="fab fa-figma skills-icons"></i>
+              </div>
+            </article>
+
+            <article className="badge green">
+              <div className="rounded">
+                <i className="fab fa-node skills-icons"></i>
+              </div>
+            </article>
+
+            <article className="badge rebecca">
+              <div className="rounded">
+                <i className="fab fa-bootstrap skills-icons"></i>
+              </div>
+            </article>
+            
+            <article className="badge gainsboro">
+              <div className="rounded">
+                <i className="fab fa-java skills-icons"></i>
+              </div>
+            </article>
+          </main>
+          </div>
         </div>
       </div>
     </>
