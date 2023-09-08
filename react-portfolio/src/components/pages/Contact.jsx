@@ -9,9 +9,11 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import { Link } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
+import  { useRef } from "react";
 import emailjs from "emailjs-com";
 
 function Contact() {
+
   // --------------------------------------------Email js---------------------------------
 
   const [emailData, setEmailData] = useState({
@@ -52,6 +54,8 @@ function Contact() {
 
   // --------------------------------------------------Form Validation---------------------------------
 
+ 
+ const [verified, setVerified] = useState(false);
   const [validated, setValidated] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formReset, setFormReset] = useState(false);
@@ -66,10 +70,19 @@ function Contact() {
       setFormSubmitted(true);
       setValidated(false);
       setFormReset(true);
+       setVerified(true);
+     
     }
     setValidated(true);
     form.reset();
   }
+ 
+ const recaptchaRef = useRef();
+
+ function handleRecaptchaChange(value) {
+  console.log("Captcha value:", value);
+  setVerified(value); // Update the verified state with the reCAPTCHA value
+}
 
   return (
     <>
@@ -183,10 +196,10 @@ function Contact() {
                   <br />
                   <ReCAPTCHA
                     sitekey="6Lfc8QcoAAAAAFdz7aA7dXGX5cwCwbge4gpkEP5y"
-                    onChange={onChange}
+                    onChange={handleRecaptchaChange}
                   />
                   <br />
-                  <Button type="submit" id="btn">
+                  <Button type="submit" id="btn" disabled= {!verified}>
                     Send Message <i className="uil uil-message"></i>
                   </Button>
                   {formSubmitted && (
