@@ -23,7 +23,7 @@ function Contact() {
   });
 
   const sendEmail = (e) => {
-    e.preventDefault();
+   
 
     emailjs
       .send(
@@ -41,6 +41,7 @@ function Contact() {
           console.error("Email could not be sent:", error);
         }
       );
+      e.target.reset()
   };
 
   function handleInputChange(e) {
@@ -49,12 +50,13 @@ function Contact() {
   }
 
 
-
  // --------------------------------------------------Recaptcha Verification----------------------------
 
  const [verified, setVerified] = useState(false);
 
   // --------------------------------------------------Form Validation---------------------------------
+
+  
 
   const [validated, setValidated] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -62,20 +64,25 @@ function Contact() {
   
   function handleSubmit(event) {
     const form = event.currentTarget;
+  
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     } else {
       sendEmail(event);
       setFormSubmitted(true);
-      setValidated(false);
-      setFormReset(true);
       setVerified(true);
-     
+      
     }
+  
     setValidated(true);
-    form.reset();
+    
   }
+
+
+
+
+  
  
 // --------------------------------------------------Recaptcha Verification----------------------------
 
@@ -134,13 +141,13 @@ function Contact() {
 
             <Col>
               <div id="form">
-                <Form noValidate validated={validated} onSubmit={handleSubmit}>
+              <Form validated={validated} onSubmit={handleSubmit}>
                   <Row>
                     <Col>
                       <Form.Group
                         as={Col}
                         md="8"
-                        controlId="validationCustom01"
+                        
                       >
                         <Form.Control
                           required
@@ -158,7 +165,7 @@ function Contact() {
                   <Form.Group
                     as={Col}
                     md="8"
-                    controlId="validationCustomUsername"
+                   
                   >
                     <InputGroup hasValidation>
                       <Form.Control
@@ -178,7 +185,7 @@ function Contact() {
                       <Form.Group
                         as={Col}
                         md="8"
-                        controlId="validationCustomUsername"
+                      
                       >
                         <InputGroup hasValidation>
                           <Form.Control
