@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import about from "../img/khanyisile.png";
-import pdf from "../Document/khanyisile.pdf";
+import pdf from "../Document/khanyi.pdf";
 
 function About() {
   return (
