@@ -9,11 +9,10 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import { Link } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
-import  { useRef } from "react";
+import { useRef } from "react";
 import emailjs from "emailjs-com";
 
 function Contact() {
-
   // --------------------------------------------Email js-----------------------------------
 
   const [emailData, setEmailData] = useState({
@@ -23,8 +22,6 @@ function Contact() {
   });
 
   const sendEmail = (e) => {
-   
-
     emailjs
       .send(
         "service_iwwa848",
@@ -41,7 +38,7 @@ function Contact() {
           console.error("Email could not be sent:", error);
         }
       );
-      e.target.reset()
+    e.target.reset();
   };
 
   function handleInputChange(e) {
@@ -49,22 +46,18 @@ function Contact() {
     setEmailData({ ...emailData, [name]: value });
   }
 
+  // --------------------------------------------------Recaptcha Verification----------------------------
 
- // --------------------------------------------------Recaptcha Verification----------------------------
-
- const [verified, setVerified] = useState(false);
+  const [verified, setVerified] = useState(false);
 
   // --------------------------------------------------Form Validation---------------------------------
 
-  
-
   const [validated, setValidated] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
- 
-  
+
   function handleSubmit(event) {
     const form = event.currentTarget;
-  
+
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
@@ -72,26 +65,19 @@ function Contact() {
       sendEmail(event);
       setFormSubmitted(true);
       setVerified(true);
-      
     }
-  
+
     setValidated(true);
-    
   }
 
+  // --------------------------------------------------Recaptcha Verification----------------------------
 
+  const recaptchaRef = useRef();
 
-
-  
- 
-// --------------------------------------------------Recaptcha Verification----------------------------
-
- const recaptchaRef = useRef();
-
- function handleRecaptchaChange(value) {
-  console.log("Captcha value:", value);
-  setVerified(value); // Update the verified state with the reCAPTCHA value
-}
+  function handleRecaptchaChange(value) {
+    console.log("Captcha value:", value);
+    setVerified(value); // Update the verified state with the reCAPTCHA value
+  }
 
   return (
     <>
@@ -141,32 +127,23 @@ function Contact() {
 
             <Col>
               <div id="form">
-              <Form validated={validated} onSubmit={handleSubmit}>
+                <Form validated={validated} onSubmit={handleSubmit}>
                   <Row>
                     <Col>
-                      <Form.Group
-                        as={Col}
-                        md="8"
-                        
-                      >
+                      <Form.Group as={Col} md="8">
                         <Form.Control
                           required
                           type="text"
                           placeholder="Enter your First name"
                           name="name"
                           onChange={handleInputChange}
-
                         />
                         <Form.Control.Feedback></Form.Control.Feedback>
                       </Form.Group>
                     </Col>
                   </Row>{" "}
                   <br />
-                  <Form.Group
-                    as={Col}
-                    md="8"
-                   
-                  >
+                  <Form.Group as={Col} md="8">
                     <InputGroup hasValidation>
                       <Form.Control
                         type="email"
@@ -182,11 +159,7 @@ function Contact() {
                   <br />
                   <Row>
                     <Col>
-                      <Form.Group
-                        as={Col}
-                        md="8"
-                      
-                      >
+                      <Form.Group as={Col} md="8">
                         <InputGroup hasValidation>
                           <Form.Control
                             type="text"
@@ -209,7 +182,7 @@ function Contact() {
                     onChange={handleRecaptchaChange}
                   />
                   <br />
-                  <Button type="submit" id="btn" disabled= {!verified}>
+                  <Button type="submit" id="btn" disabled={!verified}>
                     Send Message <i className="uil uil-message"></i>
                   </Button>
                   {formSubmitted && (
@@ -220,7 +193,7 @@ function Contact() {
             </Col>
           </Row>
         </Container>
-
+        
         {/* ---------------------------------------Footer-------------------------------------------- */}
         <footer>
           <div id="footer-content">

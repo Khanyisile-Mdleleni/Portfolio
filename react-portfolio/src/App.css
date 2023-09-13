@@ -203,7 +203,7 @@ nav .menu span {
     padding-bottom: 15px;
     padding-top: 3.2rem;
     font-size: larger;
-
+    
 }
 
 #icons ul li a {
@@ -222,7 +222,6 @@ nav .menu span {
 
 #home-container {
     display: flex;
-  
 }
 
 @media (max-width: 768px) {
