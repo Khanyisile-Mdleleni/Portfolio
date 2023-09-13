@@ -14,7 +14,7 @@ import emailjs from "emailjs-com";
 
 function Contact() {
 
-  // --------------------------------------------Email js---------------------------------
+  // --------------------------------------------Email js-----------------------------------
 
   const [emailData, setEmailData] = useState({
     name: "",
@@ -48,17 +48,17 @@ function Contact() {
     setEmailData({ ...emailData, [name]: value });
   }
 
-  function onChange(value) {
-    console.log("Captcha value:", value);
-  }
+
+
+ // --------------------------------------------------Recaptcha Verification----------------------------
+
+ const [verified, setVerified] = useState(false);
 
   // --------------------------------------------------Form Validation---------------------------------
 
- 
- const [verified, setVerified] = useState(false);
   const [validated, setValidated] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [formReset, setFormReset] = useState(false);
+ 
   
   function handleSubmit(event) {
     const form = event.currentTarget;
@@ -70,13 +70,15 @@ function Contact() {
       setFormSubmitted(true);
       setValidated(false);
       setFormReset(true);
-       setVerified(true);
+      setVerified(true);
      
     }
     setValidated(true);
     form.reset();
   }
  
+// --------------------------------------------------Recaptcha Verification----------------------------
+
  const recaptchaRef = useRef();
 
  function handleRecaptchaChange(value) {
@@ -146,6 +148,7 @@ function Contact() {
                           placeholder="Enter your First name"
                           name="name"
                           onChange={handleInputChange}
+
                         />
                         <Form.Control.Feedback></Form.Control.Feedback>
                       </Form.Group>
@@ -210,6 +213,7 @@ function Contact() {
             </Col>
           </Row>
         </Container>
+
         {/* ---------------------------------------Footer-------------------------------------------- */}
         <footer>
           <div id="footer-content">

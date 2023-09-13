@@ -221,6 +221,7 @@ nav .menu span {
 
 #home-container {
     display: flex;
+  
 }
 
 @media (max-width: 768px) {
