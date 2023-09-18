@@ -259,8 +259,8 @@ img.framed {
 }
 
 .rounded {
-    width: 70px;
-    height: 70px;
+    width: 100px;    
+    height: 100px;
     background: white;
     position: absolute;
     margin: 15px 16px auto;
@@ -269,7 +269,7 @@ img.framed {
     box-shadow: 8px 8px 8px 2px rgba(0, 0, 0, 0.23)
 }
 .skills-icons{
-    font-size: 50px;
+    font-size: 80px;
 }
 /*====================== Colors ========================*/
 .blue {
@@ -327,6 +327,15 @@ img.framed {
     color: orangered;
 }
 
+@media (max-width: 768px) {
+    .rounded {
+        width: 70px;    
+        height: 70px;
+    }
+    .skills-icons{
+        font-size: 50px;
+    }
+}
 /*===================================== Reuseable styles ============================================*/
 
 #intro {

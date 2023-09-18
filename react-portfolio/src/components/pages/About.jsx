@@ -91,6 +91,7 @@ function About() {
               <h1 id="title">Skills</h1>
               <h3 id="subtitle">My Technical Level</h3>
             </div>{" "}
+            
             <main className="wrapper">
               <article className="badge orange">
                 <div className="rounded">
