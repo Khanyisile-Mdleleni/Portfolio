@@ -34,15 +34,16 @@ function About() {
               <Col sm={7}>
                 <p className="fs-6">
                   {" "}
-                  My primary responsibility is to design, develop and maintain
-                  high-quality web applications using react, javascript other
-                  related technologies.{" "}
+                  I possess a solid foundation in UI/UX design and web
+                  development, bolstered by my CompTIA Data+ certification and
+                  MICT Data Analytics Skills Programme Certificate, which I
+                  earned during a rewarding three-month learnership at UVU
+                  Africa. My core role revolves around the design, creation, and
+                  ongoing maintenance of top-tier web applications, harnessing
+                  the power of technologies like React.js, JavaScript, and other
+                  relevant tools and frameworks.{" "}
                 </p>
-                <p className="fs-6">
-                  Birthday: 12 Feb 2001 <br />
-                  Gender: Female <br />
-                  Freelance: Available <br />
-                </p>
+
                 <Row>
                   <Col xs={6} md={4}>
                     <span className="fs-6">
@@ -65,7 +66,7 @@ function About() {
                 </Row>
                 <br />
                 <div id="about-btn">
-                  <a href={pdf}>
+                  <a href={pdf} target="_blank">
                     <button type="button" id="btn">
                       Download CV <i className="uil uil-download-alt"></i>
                     </button>
@@ -75,62 +76,61 @@ function About() {
             </Row>
           </Container>{" "}
           <br />
-
           {/*-------------------------------------------------- Skills ----------------------------------------------- */}
           <div
-        id="home"
-        style={{
-          backgroundImage: `url(${image})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          minHeight: "100vh",
-          width: "100%",
-        }}
-      >
-          <div id="intro">
-            <h1 id="title">Skills</h1>
-            <h3 id="subtitle">My Technical Level</h3>
-          </div>{" "}
-          <main className="wrapper">
-            <article className="badge orange">
-              <div className="rounded">
-                <i className="fab fa-html5 skills-icons"></i>
-              </div>
-            </article>
-            <article className="badge blue">
-              <div className="rounded">
-                <i className="fab fa-css3-alt skills-icons"></i>
-              </div>
-            </article>
-            <article className="badge gold">
-              <div className="rounded">
-                <i className="fab fa-js-square skills-icons"></i>
-              </div>
-            </article>
-            <article className="badge red">
-              <div className="rounded">
-                <i className="fab fa-figma skills-icons"></i>
-              </div>
-            </article>
+            id="home"
+            style={{
+              backgroundImage: `url(${image})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              minHeight: "100vh",
+              width: "100%",
+            }}
+          >
+            <div id="intro">
+              <h1 id="title">Skills</h1>
+              <h3 id="subtitle">My Technical Level</h3>
+            </div>{" "}
+            <main className="wrapper">
+              <article className="badge orange">
+                <div className="rounded">
+                  <i className="fab fa-html5 skills-icons"></i>
+                </div>
+              </article>
+              <article className="badge blue">
+                <div className="rounded">
+                  <i className="fab fa-css3-alt skills-icons"></i>
+                </div>
+              </article>
+              <article className="badge gold">
+                <div className="rounded">
+                  <i className="fab fa-js-square skills-icons"></i>
+                </div>
+              </article>
+              <article className="badge red">
+                <div className="rounded">
+                  <i className="fab fa-figma skills-icons"></i>
+                </div>
+              </article>
 
-            <article className="badge green">
-              <div className="rounded">
-                <i className="fab fa-node skills-icons"></i>
-              </div>
-            </article>
+              <article className="badge green">
+                <div className="rounded">
+                  <i className="fab fa-node skills-icons"></i>
+                </div>
+              </article>
 
-            <article className="badge rebecca">
-              <div className="rounded">
-                <i className="fab fa-bootstrap skills-icons"></i>
-              </div>
-            </article>
-            
-            <article className="badge gainsboro">
-              <div className="rounded">
-                <i className="fab fa-java skills-icons"></i>
-              </div>
-            </article>
-          </main>
+              <article className="badge rebecca">
+                <div className="rounded">
+                  <i className="fab fa-bootstrap skills-icons"></i>
+                </div>
+              </article>
+
+              <article className="badge gainsboro">
+                <div className="rounded">
+                  <i className="fab fa-java skills-icons"></i>
+                </div>
+              </article>
+            </main>
           </div>
         </div>
       </div>

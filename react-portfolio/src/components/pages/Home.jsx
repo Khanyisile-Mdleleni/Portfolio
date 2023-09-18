@@ -16,6 +16,7 @@ function Home() {
           width: "100%",
         }}
       >
+        
         <div className="container" id="home-container">
           <div id="icons">
             <ul>
