@@ -121,12 +121,20 @@ nav ul li a {
 
 
 /* ================================================== Home ============================================= */
-
-#home {
+#home{
     color: #fff;
-    padding-top: 42px;
-    font-size: x-large;
 }
+
+#home-container{
+  color: #fff;
+  font-size: x-large;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+ padding-top: 100px;
+}
+
 
 #wave {
     -webkit-animation-duration: 3.1s;
@@ -180,41 +188,34 @@ nav ul li a {
         width: 18.5ch;
     }
 }
-
-#icons li {
+#icons span {
     list-style: none;
-    padding-bottom: 15px;
-    padding-top: 3.2rem;
+    padding-top: 2.2rem;
     font-size: larger;
-    
+    margin-right: 40px;
 }
 
-#icons ul li a {
+#icons span:last-child {
+    margin-right: 0; /* Remove margin from the last span to avoid extra space */
+}
+
+#icons span a {
     color: rgba(118, 64, 119, 1);
 }
 
-#icons ul li a:hover {
+#icons span a:hover {
     color: #fff;
 }
 
-#home-content {
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-}
 
-#home-container {
-    display: flex;
-}
+
+
+
 
 @media (max-width: 768px) {
     #home {
         font-size: large;
-        padding-top: 20px;
-    }
-
-    #home-content {
-        padding: 20px;
+       
     }
 
     #icons li {
@@ -249,8 +250,8 @@ img.framed {
 /*====================== Badge =======================*/
 .badge {
     margin: 1.5em 3em;
-    width: 6.4em;
-    height: 6.4em;
+    width: 6.4rem;
+    height: 6.4rem;
     border-radius: 20%;
     display: inline-block;
     top: 0;
@@ -259,8 +260,8 @@ img.framed {
 }
 
 .rounded {
-    width: 100px;    
-    height: 100px;
+    width: 90px;    
+    height: 90px;
     background: white;
     position: absolute;
     margin: 15px 16px auto;
@@ -269,7 +270,7 @@ img.framed {
     box-shadow: 8px 8px 8px 2px rgba(0, 0, 0, 0.23)
 }
 .skills-icons{
-    font-size: 80px;
+    font-size: 70px;
 }
 
 /*====================== Colors ========================*/
@@ -329,6 +330,11 @@ img.framed {
 }
 
 @media (max-width: 768px) {
+    .badge {
+        margin: 1.5em 3em;
+        width: 6.4em;
+        height: 6.4em;
+    }
     .rounded {
         width: 70px;    
         height: 70px;
@@ -524,8 +530,9 @@ img.framed {
     z-index: 1;
     display: flex;
     padding: 20px;
-    align-items: flex-end;
     box-sizing: border-box;
+    align-items: center;
+    text-align: center;
 }
 
 .container-services .box .content h2 {
@@ -547,7 +554,8 @@ img.framed {
     transition: 0.5s;
     font-size: 14px;
     transform: translateY(200px);
-    transition-delay: 0.4s;
+    transition-delay: 0.4s; 
+   
 }
 
 .container-services .box:hover .content p {
@@ -632,6 +640,21 @@ img.framed {
     padding-bottom: 25px;
     padding-top: 3.2rem;
 }
+#icons li {
+    list-style: none;
+    padding-top: 2.2rem;
+    font-size: larger;
+    margin-top: 40px;
+}
+
+#icons ul li a {
+    color: rgba(118, 64, 119, 1);
+}
+
+#icons ul li a:hover {
+    color: #fff;
+}
+
 
 /*=========================================== Footer ===============================================*/
 
