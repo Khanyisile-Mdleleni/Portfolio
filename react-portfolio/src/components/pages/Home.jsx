@@ -40,7 +40,7 @@ function Home() {
                   <span>
                     <a
                       href="https://www.linkedin.com/in/khanyisile-mdleleni-b77691250/"
-                      className="home__social-icon"
+                      className="home__social-icon"  target="_blank"
                     >
                       <i className="uil uil-linkedin"></i>
                     </a>
@@ -48,7 +48,7 @@ function Home() {
                   <span>
                     <a
                       href="https://github.com/Khanyisile-Mdleleni"
-                      className="home__social-icon"
+                      className="home__social-icon"  target="_blank"
                     >
                       <i className="uil uil-github"></i>
                     </a>
@@ -56,7 +56,7 @@ function Home() {
                   <span>
                     <a
                       href="https://m.facebook.com/khanyisile.mdleleni.16?eav=AfYMrSPTI18yWVy7cTOlgkNuds"
-                      className="home__social-icon"
+                      className="home__social-icon"  target="_blank"
                     >
                       <i className="uil uil-facebook"></i>
                     </a>

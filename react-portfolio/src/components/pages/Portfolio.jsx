@@ -62,7 +62,7 @@ function Portfolio() {
               <div id="my-card">
                 <img src={biz} alt="" />
                 <div className="caption">Business Card</div>
-                <a href="" target="_blank"> <br />
+                <a href="https://www.canva.com/design/DAFu-VYmkgY/BDN_HouQ7sgUgLovWFQdqA/edit" target="_blank"> <br />
                   {" "}
                   <button className="image-button" id="btn">
                     View Project <i className="uil uil-arrow-right"></i>

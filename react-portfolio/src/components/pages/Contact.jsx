@@ -218,13 +218,13 @@ function Contact() {
 
             <div className="footer_title">
               <div id="icons">
-                <a href="https://github.com/Khanyisile-Mdleleni">
+                <a href="https://github.com/Khanyisile-Mdleleni"  target="_blank">
                   <i className="uil uil-github"></i>
                 </a>
-                <a href="https://twitter.com/kay_mdleleni/">
+                <a href="https://twitter.com/kay_mdleleni/"  target="_blank">
                   <i className="uil uil-twitter"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/khanyisile-mdleleni-b77691250/">
+                <a href="https://www.linkedin.com/in/khanyisile-mdleleni-b77691250/"  target="_blank">
                   <i className="uil uil-linkedin"></i>
                 </a>
               </div>
