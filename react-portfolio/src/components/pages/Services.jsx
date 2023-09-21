@@ -19,7 +19,7 @@ function Services() {
           width: "100%",
         }}
       >
-        <div id="intro">
+        <div id="intro" className="p-3">
           <h1 id="title">Services</h1>
           <h3 id="subtitle">What I offer</h3>
           <br />
@@ -35,10 +35,9 @@ function Services() {
                 <h2>UI/UX Design</h2>
                 <p>
                   <ul>
-                    <li> Designing engaging and responsive landing pages.</li>
+                    <li> Designing responsive landing pages.</li>
                     <li>
-                      {" "}
-                      Creating the design and layout of a website or web pages.
+                      Creating the design and layout of a website.
                     </li>
                   </ul>
                 </p>
@@ -55,7 +54,7 @@ function Services() {
                 <p>
                   <ul>
                     <li>
-                      Uses frameworks like react to create user-friendly web
+                      Uses frameworks to create user-friendly web
                       pages.
                     </li>
                     <li>Create quality mockups and prototypes.</li>

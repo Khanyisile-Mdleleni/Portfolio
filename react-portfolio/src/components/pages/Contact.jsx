@@ -25,9 +25,9 @@ function Contact() {
     emailjs
       .send(
         "service_iwwa848",
-        "template_cx2fegh",
+        "template_b2vwkl9",
         emailData,
-        "3JbxCt70QntLe28Rs"
+        "bHEeVHWjgFWuRk4Ph"
       )
 
       .then(
@@ -91,7 +91,7 @@ function Contact() {
           width: "100%",
         }}
       >
-        <div id="intro">
+        <div id="intro" className="p-3">
           <h1 id="title">Contact Me</h1>
           <h3 id="subtitle">Get in touch</h3>
         </div>{" "}

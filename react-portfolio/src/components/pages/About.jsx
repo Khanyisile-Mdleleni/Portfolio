@@ -19,7 +19,7 @@ function About() {
           width: "100%",
         }}
       >
-        <div id="intro">
+        <div id="intro" className="p-3">
           <h1 id="title">About</h1>
           <h3 id="subtitle">My Introduction</h3>
         </div>{" "}
@@ -83,7 +83,7 @@ function About() {
               backgroundImage: `url(${image})`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
-              minHeight: "100vh",
+              minHeight: "70vh",
               width: "100%",
             }}
           >
