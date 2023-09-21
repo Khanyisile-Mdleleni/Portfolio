@@ -1,19 +1,17 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import image from "../img/bg.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import { Link } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
-import { useRef } from "react";
 import emailjs from "emailjs-com";
 
 function Contact() {
-  // --------------------------------------------Email js-----------------------------------
+  //-------------------------- Email js--------------------
 
   const [emailData, setEmailData] = useState({
     name: "",
@@ -24,42 +22,48 @@ function Contact() {
   const sendEmail = (e) => {
     emailjs
       .send(
-        "service_iwwa848",
+        "service_l1cg6kh",
         "template_b2vwkl9",
         emailData,
-        "bHEeVHWjgFWuRk4Ph"
+        "kNbj41AzftMobHrsn"
       )
-
       .then(
         (response) => {
           console.log("Email sent successfully:", response);
+          setEmailData({
+            name: "",
+            email: "",
+            message: "",
+          }); 
         },
         (error) => {
           console.error("Email could not be sent:", error);
         }
       );
-    e.target.reset();
+      e.target.reset();
   };
+     
+  
 
   function handleInputChange(e) {
     const { name, value } = e.target;
     setEmailData({ ...emailData, [name]: value });
   }
 
-  // --------------------------------------------------Recaptcha Verification----------------------------
+  //-------------------------------Recaptcha Verification---------------
 
   const [verified, setVerified] = useState(false);
 
-  // --------------------------------------------------Form Validation---------------------------------
+  //-------------------------------- Form Validation--------------------
 
   const [validated, setValidated] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   function handleSubmit(event) {
     const form = event.currentTarget;
-
+    event.preventDefault(); 
     if (form.checkValidity() === false) {
-      event.preventDefault();
+    
       event.stopPropagation();
     } else {
       sendEmail(event);
@@ -70,7 +74,7 @@ function Contact() {
     setValidated(true);
   }
 
-  // --------------------------------------------------Recaptcha Verification----------------------------
+  //------------------------------------------Ref for Recaptcha--------------
 
   const recaptchaRef = useRef();
 
@@ -78,6 +82,7 @@ function Contact() {
     console.log("Captcha value:", value);
     setVerified(value); // Update the verified state with the reCAPTCHA value
   }
+
 
   return (
     <>
@@ -127,7 +132,7 @@ function Contact() {
 
             <Col>
               <div id="form">
-                <Form validated={validated} onSubmit={handleSubmit}>
+              <Form validated={validated} onSubmit={handleSubmit}>
                   <Row>
                     <Col>
                       <Form.Group as={Col} md="8">
@@ -193,7 +198,6 @@ function Contact() {
             </Col>
           </Row>
         </Container>
-        
         {/* ---------------------------------------Footer-------------------------------------------- */}
         <footer>
           <div id="footer-content">
@@ -218,13 +222,19 @@ function Contact() {
 
             <div className="footer_title">
               <div id="icons">
-                <a href="https://github.com/Khanyisile-Mdleleni"  target="_blank">
+                <a
+                  href="https://github.com/Khanyisile-Mdleleni"
+                  target="_blank"
+                >
                   <i className="uil uil-github"></i>
                 </a>
-                <a href="https://twitter.com/kay_mdleleni/"  target="_blank">
+                <a href="https://twitter.com/kay_mdleleni/" target="_blank">
                   <i className="uil uil-twitter"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/khanyisile-mdleleni-b77691250/"  target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/khanyisile-mdleleni-b77691250/"
+                  target="_blank"
+                >
                   <i className="uil uil-linkedin"></i>
                 </a>
               </div>

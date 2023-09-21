@@ -28,7 +28,7 @@ function Portfolio() {
           width: "100%",
         }}
       >
-        <div id="intro" className="p-3">
+        <div id="intro" className="p-4">
           <h1 id="title">Portfolio</h1>
           <h3 id="subtitle">Most recent work</h3>
         </div>{" "}

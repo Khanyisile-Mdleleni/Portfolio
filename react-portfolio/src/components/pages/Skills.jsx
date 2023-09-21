@@ -14,7 +14,7 @@ function Skills() {
           width: "100%",
         }}
       >
-        <div id="intro" className="p-3">
+        <div id="intro" className="p-4">
           <h1 id="titlie">Qualifications</h1>
           <h3 id="subtitle">My Personal Journey</h3>
         </div>{" "}

@@ -19,7 +19,7 @@ function Services() {
           width: "100%",
         }}
       >
-        <div id="intro" className="p-3">
+        <div id="intro" className="p-4">
           <h1 id="title">Services</h1>
           <h3 id="subtitle">What I offer</h3>
           <br />
