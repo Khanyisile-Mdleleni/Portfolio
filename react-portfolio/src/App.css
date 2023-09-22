@@ -218,6 +218,11 @@ nav ul li a {
        
     }
 
+    #home-container{
+       
+        padding-left: 60px;
+        
+      }
     #icons li {
         padding-bottom: 15px;
         padding-top: 1rem;
