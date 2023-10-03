@@ -61,9 +61,8 @@ function Contact() {
 
   function handleSubmit(event) {
     const form = event.currentTarget;
-    event.preventDefault(); 
+     event.preventDefault(); 
     if (form.checkValidity() === false) {
-    
       event.stopPropagation();
     } else {
       sendEmail(event);
