@@ -5,6 +5,7 @@ import image from "../img/bg.png";
 import memory from "../img/memory.png";
 import school from "../img/school.png";
 import biz from "../img/biz.jpg";
+import ace from "../img/serv-2.jpg";
 
 function Portfolio() {
   const settings = {
@@ -80,10 +81,10 @@ function Portfolio() {
                 </a>
               </div>
               <div id="my-card">
-                <img src={biz} alt="" />
-                <div className="caption">Business Card</div>
+                <img src={ace} alt="" />
+                <div className="caption">Business Website</div>
                 <a
-                  href="https://www.canva.com/design/DAFu-VYmkgY/BDN_HouQ7sgUgLovWFQdqA/edit"
+                  href="https://ace-of-digital.firebaseapp.com/"
                   target="_blank"
                 >
                   {" "}
