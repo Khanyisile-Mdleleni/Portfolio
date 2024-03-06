@@ -32,16 +32,18 @@ function Portfolio() {
           <h1 id="title">Portfolio</h1>
           <h3 id="subtitle">Most recent work</h3>
         </div>{" "}
-
         <div className="portfolio">
           <div className="container-portfolio">
-
             <Slider {...settings}>
               <div id="my-card">
                 <img src={school} alt="" />
                 <div className="caption">Mzamomtsha Project</div>
-                <a href="https://mzamomtsha-primary-school.netlify.app/" target="_blank"> <br />
+                <a
+                  href="https://mzamomtsha-primary-school.netlify.app/"
+                  target="_blank"
+                >
                   {" "}
+                  <br />{" "}
                   <button className="image-button" id="btn">
                     View Project <i className="uil uil-arrow-right"></i>
                   </button>
@@ -51,8 +53,12 @@ function Portfolio() {
               <div id="my-card">
                 <img src={memory} alt="" />
                 <div className="caption">Memory Game</div>
-                <a href="https://ephemeral-rolypoly-338eb0.netlify.app/" target="_blank"> <br />
+                <a
+                  href="https://ephemeral-rolypoly-338eb0.netlify.app/"
+                  target="_blank"
+                >
                   {" "}
+                  <br />{" "}
                   <button className="image-button" id="btn">
                     View Project <i className="uil uil-arrow-right"></i>
                   </button>
@@ -62,14 +68,31 @@ function Portfolio() {
               <div id="my-card">
                 <img src={biz} alt="" />
                 <div className="caption">Business Card</div>
-                <a href="https://www.canva.com/design/DAFu-VYmkgY/BDN_HouQ7sgUgLovWFQdqA/edit" target="_blank"> <br />
+                <a
+                  href="https://www.canva.com/design/DAFu-VYmkgY/BDN_HouQ7sgUgLovWFQdqA/edit"
+                  target="_blank"
+                >
                   {" "}
+                  <br />{" "}
                   <button className="image-button" id="btn">
                     View Project <i className="uil uil-arrow-right"></i>
                   </button>
                 </a>
               </div>
-
+              <div id="my-card">
+                <img src={biz} alt="" />
+                <div className="caption">Business Card</div>
+                <a
+                  href="https://www.canva.com/design/DAFu-VYmkgY/BDN_HouQ7sgUgLovWFQdqA/edit"
+                  target="_blank"
+                >
+                  {" "}
+                  <br />{" "}
+                  <button className="image-button" id="btn">
+                    View Project <i className="uil uil-arrow-right"></i>
+                  </button>
+                </a>
+              </div>
             </Slider>
           </div>
         </div>
