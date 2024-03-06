@@ -109,7 +109,7 @@ function Contact() {
                     <a href="">
                       <i className="uil uil-phone"></i>
                     </a>{" "}
-                    068 607 6036
+                    063 109 8090
                   </li>
                   <li>
                     <a href="">
