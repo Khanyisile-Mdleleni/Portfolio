@@ -39,7 +39,7 @@ function About() {
                   MICT Data Analytics Skills Programme Certificate, which I
                   earned during a rewarding three-month learnership at UVU
                   Africa. My core role revolves around the design, creation, and
-                  ongoing maintenance of top-tier web applications, harnessing
+                  ongoing maintenance of top-tier web applications harnessing
                   the power of technologies like React.js, JavaScript, and other
                   relevant tools and frameworks.{" "}
                 </p>

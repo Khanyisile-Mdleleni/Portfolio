@@ -28,7 +28,7 @@ function Home() {
                 </h1>
               </div>
               <div className="p-2 ">
-                <h3 id="home-subtitle">Software Developer</h3>
+                <h3 id="home-subtitle">Frontend Developer</h3>
               </div>
               <div className="p-2 ">
                 <p id="home-description">
