@@ -55,7 +55,7 @@ function About() {
                 <Row>
                   <Col xs={6} md={4}>
                     <span className="fs-6">
-                      <b>01+</b>
+                      <b>02+</b>
                     </span>
                     <span className="fs-6">
                       {" "}
@@ -64,7 +64,7 @@ function About() {
                   </Col>
                   <Col xs={6} md={4}>
                     <span className="fs-6">
-                      <b>02+</b>
+                      <b>04+</b>
                     </span>
                     <span className="fs-6">
                       {" "}
