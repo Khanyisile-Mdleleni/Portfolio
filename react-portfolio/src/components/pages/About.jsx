@@ -34,14 +34,22 @@ function About() {
               <Col sm={7}>
                 <p className="fs-6">
                   {" "}
-                  I possess a solid foundation in UI/UX design and web
-                  development, bolstered by my CompTIA Data+ certification and
-                  MICT Data Analytics Skills Programme Certificate, which I
-                  earned during a rewarding three-month learnership at UVU
-                  Africa. My core role revolves around the design, creation, and
-                  ongoing maintenance of top-tier web applications harnessing
-                  the power of technologies like React.js, JavaScript, and other
-                  relevant tools and frameworks.{" "}
+                  A passionate Frontend Developer with two years of experience
+                  specializing in React.js. With a keen eye for design, I've
+                  also spent a year honing my skills in UI/UX design using tools
+                  like Figma, ensuring not just functionality but also a
+                  seamless user experience.  On top of my development and
+                  design expertise, I've been a dedicated content writer for
+                  blogs, utilizing platforms like WordPress to craft engaging
+                  and informative articles. This experience has honed my ability
+                  to communicate complex ideas effectively and create content
+                  that resonates with readers.  My journey in tech isn't
+                  limited to development, design, and content creation—I hold a
+                  CompTIA Data+ certificate, reflecting my commitment to
+                  understanding and managing data effectively. Additionally, I
+                  bring experience in project management tools like Jira,
+                  ensuring smooth collaboration and delivery in team
+                  environments.{" "}
                 </p>
 
                 <Row>
@@ -91,7 +99,6 @@ function About() {
               <h1 id="title">Skills</h1>
               <h3 id="subtitle">My Technical Level</h3>
             </div>{" "}
-            
             <main className="wrapper">
               <article className="badge orange">
                 <div className="rounded">
